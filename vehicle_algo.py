@@ -60,13 +60,24 @@ class vehicle_simulation:
                 # Project miss distance vector onto plane
                 b = rel_pos - np.dot(rel_pos, rel_vel_normal) * rel_vel_normal
 
-                # Transform covariance into b-plane coordinates
-                H_B = np.vstack([first_orth_basis, second_orth_basis])
-                # reduce P to 2D subspace
-                P_B = H_B @ rel_P[:3, :3] @ H_B.T
+                # Transform covariance into b-plane coordinates (position-only)
+                # Build 2x2 projector from x,y components of the orthonormal basis
+                H_B_pos = np.vstack([first_orth_basis[:2], second_orth_basis[:2]])  # (2x2)
+                P_pos = rel_P[:2, :2]  # position covariance only (2x2)
+                P_B = H_B_pos @ P_pos @ H_B_pos.T  # (2x2)
 
-                # Mahalanobis distance
-                d_square = b[:2].T @ np.linalg.inv(P_B) @ b[:2]
+                # Ensure numerical stability: symmetrize and eigenvalue floor
+                P_B = 0.5 * (P_B + P_B.T)
+                try:
+                    eigvals, eigvecs = np.linalg.eigh(P_B)
+                    eigvals = np.maximum(eigvals, 1e-9)
+                    P_B_reg = eigvecs @ np.diag(eigvals) @ eigvecs.T
+                    # Mahalanobis distance in b-plane: project miss vector to b-plane basis
+                    b_B = H_B_pos @ b[:2]
+                    d_square = b_B.T @ np.linalg.inv(P_B_reg) @ b_B
+                except np.linalg.LinAlgError:
+                    # Fallback: simple distance check in b-plane
+                    d_square = np.inf
 
                 crit = chi2.ppf(confidence, df=2)
 

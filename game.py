@@ -780,7 +780,7 @@ def check_collisions(vehicles: List[Vehicle]):
     sim = vehicle_simulation(algo_vehicles)
     
     # Check collision at 95% confidence level
-    is_collision, idx1, idx2 = sim.is_collision(0.95)
+    is_collision, idx1, idx2 = sim.is_collision(0.99)
     
     # Calculate actual Pc for the pair (simplified - would need actual b-plane calculation)
     collision_prob = 0.0
