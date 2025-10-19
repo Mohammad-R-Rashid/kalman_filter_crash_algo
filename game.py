@@ -7,13 +7,32 @@ from pathlib import Path
 import pygame
 import numpy as np
 from typing import List, Tuple
-from vehicle_algo import vehicle as VehicleAlgo, vehicle_simulation
+from utils.vehicle_algo import vehicle as VehicleAlgo, vehicle_simulation
 
 # ---------- Display / Style ----------
 WIN_W, WIN_H = 1200, 800
 MARGIN = 60
 BG = (240, 242, 245)  # Light gray background (like Google Maps)
 DEFAULT_WIDTH, DEFAULT_COLOR = 3, (255, 255, 255)
+
+# Zoom limits for better UX
+MIN_ZOOM = 0.3
+MAX_ZOOM = 5.0
+
+# Road hierarchy for zoom-based filtering
+ROAD_HIERARCHY = {
+    "motorway": 1,
+    "trunk": 1,
+    "primary": 2,
+    "secondary": 3,
+    "tertiary": 4,
+    "residential": 5,
+    "unclassified": 5,
+    "service": 6,
+    "living_street": 6,
+    "footway": 7,
+    "path": 7
+}
 
 # Realistic road styling with lane information
 HIGHWAY_STYLE = {
@@ -22,81 +41,96 @@ HIGHWAY_STYLE = {
         "color": (255, 200, 100),  # Orange
         "outline": (200, 150, 50),
         "lanes": 4,
-        "label_color": (100, 70, 20)
+        "label_color": (100, 70, 20),
+        "priority": 1
     },
     "trunk": {
         "width": 14, 
         "color": (255, 210, 110),
         "outline": (200, 160, 60),
         "lanes": 4,
-        "label_color": (100, 75, 25)
+        "label_color": (100, 75, 25),
+        "priority": 1
     },
     "primary": {
         "width": 12, 
         "color": (255, 235, 150),  # Yellow
         "outline": (200, 180, 100),
         "lanes": 3,
-        "label_color": (100, 85, 40)
+        "label_color": (100, 85, 40),
+        "priority": 2
     },
     "secondary": {
         "width": 10, 
         "color": (255, 255, 200),  # Light yellow
         "outline": (200, 200, 150),
         "lanes": 2,
-        "label_color": (100, 100, 60)
+        "label_color": (100, 100, 60),
+        "priority": 3
     },
     "tertiary": {
         "width": 9, 
         "color": (255, 255, 255),  # White
         "outline": (180, 180, 180),
         "lanes": 2,
-        "label_color": (80, 80, 80)
+        "label_color": (80, 80, 80),
+        "priority": 4
     },
     "residential": {
         "width": 8, 
         "color": (255, 255, 255),  # White
         "outline": (200, 200, 200),
         "lanes": 2,
-        "label_color": (100, 100, 100)
+        "label_color": (100, 100, 100),
+        "priority": 5
     },
     "unclassified": {
         "width": 7, 
         "color": (250, 250, 250),
         "outline": (210, 210, 210),
         "lanes": 2,
-        "label_color": (120, 120, 120)
+        "label_color": (120, 120, 120),
+        "priority": 5
     },
     "service": {
         "width": 5, 
         "color": (245, 245, 245),
         "outline": (220, 220, 220),
         "lanes": 1,
-        "label_color": (140, 140, 140)
+        "label_color": (140, 140, 140),
+        "priority": 6
     },
     "living_street": {
         "width": 6, 
         "color": (248, 248, 248),
         "outline": (215, 215, 215),
         "lanes": 1,
-        "label_color": (130, 130, 130)
+        "label_color": (130, 130, 130),
+        "priority": 6
     },
     "footway": {
         "width": 3, 
         "color": (220, 220, 220),
         "outline": (180, 180, 180),
         "lanes": 0,
-        "label_color": (150, 150, 150)
+        "label_color": (150, 150, 150),
+        "priority": 7
     },
     "path": {
         "width": 3, 
         "color": (215, 215, 215),
         "outline": (175, 175, 175),
         "lanes": 0,
-        "label_color": (150, 150, 150)
+        "label_color": (150, 150, 150),
+        "priority": 7
     },
 }
 ARROW_LEN = 14  # px
 ARROW_ANG = math.radians(22)
+
+# Camera control settings
+PAN_SPEED = 15.0  # pixels per frame for keyboard panning
+ZOOM_SPEED = 0.05  # zoom increment per frame
 
 # ---------- Simulation Parameters ----------
 NUM_AGENTS = 10
@@ -186,9 +220,39 @@ def highway_style(hwy):
         "color": DEFAULT_COLOR,
         "outline": (180, 180, 180),
         "lanes": 1,
-        "label_color": (100, 100, 100)
+        "label_color": (100, 100, 100),
+        "priority": 5
     }
     return HIGHWAY_STYLE.get(hwy, default)
+
+def should_draw_road(highway_type: str, zoom_level: float) -> bool:
+    """Determine if a road should be drawn at the current zoom level"""
+    hierarchy = ROAD_HIERARCHY.get(highway_type, 5)
+    
+    # Zoom thresholds for different road types
+    if zoom_level < 0.5:
+        return hierarchy <= 1  # Only motorways/trunks
+    elif zoom_level < 0.8:
+        return hierarchy <= 2  # Add primary roads
+    elif zoom_level < 1.2:
+        return hierarchy <= 3  # Add secondary roads
+    elif zoom_level < 1.8:
+        return hierarchy <= 4  # Add tertiary roads
+    elif zoom_level < 2.5:
+        return hierarchy <= 5  # Add residential/unclassified
+    else:
+        return True  # Show all roads when zoomed in
+
+def get_adaptive_width(base_width: int, zoom_level: float) -> int:
+    """Scale road width based on zoom level for better visibility"""
+    # At low zoom, make roads slightly thicker for visibility
+    # At high zoom, use normal width
+    if zoom_level < 0.7:
+        return int(base_width * 1.3)
+    elif zoom_level < 1.0:
+        return int(base_width * 1.1)
+    else:
+        return base_width
 
 # ---------- Drawing Helpers ----------
 def draw_rounded_rect(surf, rect, color, radius=8, alpha=255):
@@ -647,12 +711,22 @@ class Vehicle:
                                tuple(int(c * 0.7) for c in color[:3]), meters_to_pixels, 150)
 
 # ---------- Drawing helpers ----------
-def draw_buildings(screen, buildings, w2s, scale, pan):
-    """Draw building footprints as realistic structures"""
+def draw_buildings(screen, buildings, w2s, scale, pan, zoom_level):
+    """Draw building footprints as realistic structures (only when zoomed in)"""
+    # Only show buildings when zoomed in enough
+    if zoom_level < 1.3:
+        return
+    
     building_fill = (200, 200, 210)  # Light gray
     building_outline = (140, 140, 150)  # Darker outline
     
+    buildings_drawn = 0
+    max_buildings = 500  # Limit for performance
+    
     for building in buildings:
+        if buildings_drawn >= max_buildings:
+            break
+            
         if building['type'] == 'Polygon':
             coords = building['coordinates']
             if len(coords) < 3:
@@ -660,34 +734,130 @@ def draw_buildings(screen, buildings, w2s, scale, pan):
             
             # Convert to screen coordinates
             screen_coords = []
+            on_screen = False
             for lon, lat in coords:
                 px, py = w2s(lon, lat, scale=scale, pan=pan)
                 screen_coords.append((px, py))
+                # Check if at least one point is on screen
+                if 0 <= px <= WIN_W and 0 <= py <= WIN_H:
+                    on_screen = True
             
-            if len(screen_coords) >= 3:
+            # Only draw if visible on screen
+            if on_screen and len(screen_coords) >= 3:
                 try:
                     # Draw filled building
                     pygame.draw.polygon(screen, building_fill, screen_coords, 0)
                     # Draw outline
                     pygame.draw.polygon(screen, building_outline, screen_coords, 2)
+                    buildings_drawn += 1
                 except:
                     pass  # Skip invalid polygons
+
+def draw_minimap(screen, nodes, edges, vehicles, bounds, pan, scale):
+    """Draw a minimap in the top-right corner"""
+    minimap_size = 150
+    minimap_x = WIN_W - minimap_size - 15
+    minimap_y = 100  # Below the control panel
+    
+    # Draw minimap background
+    minimap_surf = pygame.Surface((minimap_size, minimap_size), pygame.SRCALPHA)
+    pygame.draw.rect(minimap_surf, (30, 35, 45, 220), minimap_surf.get_rect(), border_radius=8)
+    pygame.draw.rect(minimap_surf, (80, 90, 110, 200), minimap_surf.get_rect(), width=2, border_radius=8)
+    screen.blit(minimap_surf, (minimap_x, minimap_y))
+    
+    # Calculate minimap projection
+    min_lon, max_lon, min_lat, max_lat = bounds
+    
+    def minimap_project(lon, lat):
+        # Project to minimap coordinates
+        if abs(max_lon - min_lon) < 1e-12 or abs(max_lat - min_lat) < 1e-12:
+            return minimap_x + minimap_size // 2, minimap_y + minimap_size // 2
+        
+        x = minimap_x + 10 + (lon - min_lon) / (max_lon - min_lon) * (minimap_size - 20)
+        y = minimap_y + 10 + (max_lat - lat) / (max_lat - min_lat) * (minimap_size - 20)
+        return int(x), int(y)
+    
+    # Draw major roads on minimap
+    for e in edges:
+        highway_type = e.get("highway", "unclassified")
+        hierarchy = ROAD_HIERARCHY.get(highway_type, 5)
+        
+        # Only show major roads on minimap
+        if hierarchy <= 2:
+            u, v = e["from"], e["to"]
+            if u in nodes and v in nodes:
+                a, b = nodes[u], nodes[v]
+                p0 = minimap_project(a["x"], a["y"])
+                p1 = minimap_project(b["x"], b["y"])
+                
+                road_color = (255, 200, 100) if hierarchy == 1 else (255, 235, 150)
+                pygame.draw.line(screen, road_color, p0, p1, 2 if hierarchy == 1 else 1)
+    
+    # Draw vehicles as dots
+    for v in vehicles:
+        x, y, _, _ = v.algo_vehicle.external_state
+        lon, lat = v.m_to_lonlat(x, y)
+        px, py = minimap_project(lon, lat)
+        
+        # Draw vehicle dot
+        vehicle_color = COLOR_DANGER if v.is_collision_risk else COLOR_SAFE
+        pygame.draw.circle(screen, vehicle_color, (px, py), 3)
+    
+    # Draw viewport indicator (shows current view on minimap)
+    # This is a simplified representation
+    viewport_color = (120, 180, 220, 150)
+    viewport_size = int((minimap_size - 20) / scale)
+    viewport_size = max(5, min(viewport_size, minimap_size - 20))
+    
+    # Calculate viewport center on minimap
+    center_lon = min_lon + (max_lon - min_lon) * 0.5
+    center_lat = min_lat + (max_lat - min_lat) * 0.5
+    vcx, vcy = minimap_project(center_lon, center_lat)
+    
+    # Draw viewport rectangle
+    viewport_rect = pygame.Rect(
+        vcx - viewport_size // 2,
+        vcy - viewport_size // 2,
+        viewport_size,
+        viewport_size
+    )
+    viewport_surf = pygame.Surface((viewport_size, viewport_size), pygame.SRCALPHA)
+    pygame.draw.rect(viewport_surf, viewport_color, viewport_surf.get_rect(), width=2)
+    screen.blit(viewport_surf, viewport_rect.topleft)
 
 def draw_edges(screen, nodes, edges, w2s, scale, pan, base_scale, zoom_scale, font):
     """Draw roads with realistic styling, lane markings, and labels"""
     drawn_labels = {}  # Track which labels we've drawn to avoid duplicates
+    label_count = 0
+    max_labels = 50 if zoom_scale > 1.5 else 30 if zoom_scale > 1.0 else 15
     
+    # Filter and sort edges by priority (lower priority = draw first)
+    edges_to_draw = []
     for e in edges:
+        highway_type = e.get("highway", "unclassified")
+        if should_draw_road(highway_type, zoom_scale):
+            u, v = e["from"], e["to"]
+            if u in nodes and v in nodes:
+                style = highway_style(highway_type)
+                edges_to_draw.append((style["priority"], e, style))
+    
+    # Sort by priority (higher priority roads drawn last = on top)
+    edges_to_draw.sort(key=lambda x: x[0], reverse=True)
+    
+    for priority, e, style in edges_to_draw:
         u, v = e["from"], e["to"]
-        if u not in nodes or v not in nodes: 
-            continue
-            
         a, b = nodes[u], nodes[v]
         p0 = w2s(a["x"], a["y"], scale=zoom_scale, pan=pan)
         p1 = w2s(b["x"], b["y"], scale=zoom_scale, pan=pan)
         
-        style = highway_style(e.get("highway"))
-        width = style["width"]
+        # Skip if edge is completely off-screen (basic culling)
+        if (max(p0[0], p1[0]) < 0 or min(p0[0], p1[0]) > WIN_W or
+            max(p0[1], p1[1]) < 0 or min(p0[1], p1[1]) > WIN_H):
+            continue
+        
+        # Get adaptive width
+        base_width = style["width"]
+        width = get_adaptive_width(base_width, zoom_scale)
         color = style["color"]
         outline = style["outline"]
         lanes = style["lanes"]
@@ -698,18 +868,13 @@ def draw_edges(screen, nodes, edges, w2s, scale, pan, base_scale, zoom_scale, fo
         # Draw road surface
         pygame.draw.line(screen, color, p0, p1, width)
         
-        # Draw lane markings for multi-lane roads
-        if SHOW_LANE_MARKINGS and lanes >= 2 and width >= 8:
-            # Calculate perpendicular offset for lane dividers
+        # Draw lane markings for multi-lane roads (only when zoomed in enough)
+        if SHOW_LANE_MARKINGS and lanes >= 2 and width >= 8 and zoom_scale > 1.2:
             dx = p1[0] - p0[0]
             dy = p1[1] - p0[1]
             length = math.sqrt(dx**2 + dy**2)
             
             if length > 0:
-                # Unit perpendicular vector
-                perp_x = -dy / length
-                perp_y = dx / length
-                
                 # Draw center line (dashed)
                 num_dashes = int(length / 20)
                 for i in range(num_dashes):
@@ -719,36 +884,38 @@ def draw_edges(screen, nodes, edges, w2s, scale, pan, base_scale, zoom_scale, fo
                     dash_end = (int(p0[0] + dx * t2), int(p0[1] + dy * t2))
                     pygame.draw.line(screen, (200, 200, 120), dash_start, dash_end, 2)
         
-        # Draw road name labels (if available and SHOW_LABELS enabled)
-        if SHOW_LABELS and e.get("name"):
-            road_name = e["name"]
-            # Handle case where name might be a list
-            if isinstance(road_name, list):
-                road_name = road_name[0] if road_name else None
-            
-            # Only draw valid string names
-            if road_name and isinstance(road_name, str):
-                # Only draw each road name once
-                if road_name not in drawn_labels:
-                    mx = (p0[0] + p1[0]) // 2
-                    my = (p0[1] + p1[1]) // 2
-                    
-                    # Create label with background
-                    label_text = font.render(road_name, True, style["label_color"])
-                    label_rect = label_text.get_rect(center=(mx, my - 12))
-                    
-                    # Draw white background for readability
-                    bg_rect = label_rect.inflate(8, 4)
-                    bg_surface = pygame.Surface((bg_rect.width, bg_rect.height))
-                    bg_surface.fill((255, 255, 255))
-                    bg_surface.set_alpha(200)
-                    screen.blit(bg_surface, bg_rect)
-                    
-                    screen.blit(label_text, label_rect)
-                    drawn_labels[road_name] = True
+        # Draw road name labels (only when zoomed in and for major roads)
+        if SHOW_LABELS and e.get("name") and label_count < max_labels and zoom_scale > 1.0:
+            # Prioritize major roads for labels
+            if priority <= 3 or zoom_scale > 1.8:
+                road_name = e["name"]
+                if isinstance(road_name, list):
+                    road_name = road_name[0] if road_name else None
+                
+                if road_name and isinstance(road_name, str):
+                    if road_name not in drawn_labels:
+                        mx = (p0[0] + p1[0]) // 2
+                        my = (p0[1] + p1[1]) // 2
+                        
+                        # Only draw if label position is on screen
+                        if 0 <= mx <= WIN_W and 0 <= my <= WIN_H:
+                            # Create label with background
+                            label_text = font.render(road_name, True, style["label_color"])
+                            label_rect = label_text.get_rect(center=(mx, my - 12))
+                            
+                            # Draw white background for readability
+                            bg_rect = label_rect.inflate(8, 4)
+                            bg_surface = pygame.Surface((bg_rect.width, bg_rect.height))
+                            bg_surface.fill((255, 255, 255))
+                            bg_surface.set_alpha(200)
+                            screen.blit(bg_surface, bg_rect)
+                            
+                            screen.blit(label_text, label_rect)
+                            drawn_labels[road_name] = True
+                            label_count += 1
         
-        # Draw directional arrows for one-way streets
-        if e.get("oneway") is True:
+        # Draw directional arrows for one-way streets (only when zoomed in)
+        if e.get("oneway") is True and zoom_scale > 1.5:
             mx = (p0[0] + p1[0]) / 2.0
             my = (p0[1] + p1[1]) / 2.0
             ang = math.atan2(p1[1] - p0[1], p1[0] - p0[0])
@@ -933,19 +1100,34 @@ def draw_collision_badge(screen, vehicles, collision_pair, collision_prob, w2s, 
 
 # ---------- Main ----------
 def main():
-    p = Path("wampus.json")
-    if not p.exists():
-        print("ERROR: Save your JSON as wampus.json next to this file.")
+    # Load config to get current map
+    config_path = Path(__file__).parent / "config.json"
+    try:
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+        map_name = config['current_map']
+    except FileNotFoundError:
+        print("ERROR: config.json not found. Using default map 'austin'")
+        map_name = "austin"
+    
+    # Load map data using config
+    map_json_path = Path(f"data/{map_name}.json")
+    if not map_json_path.exists():
+        print(f"ERROR: Map file {map_json_path} not found.")
+        print(f"Please run: python utils/test.py && python utils/parse_to_json.py")
         sys.exit(1)
-    nodes, edges = load_graph(p)
+    
+    print(f"Loading map: {map_name}")
+    nodes, edges = load_graph(map_json_path)
     
     # Load building data (optional - will be empty list if not available)
-    buildings = load_buildings(Path("buildings.json"))
+    buildings_path = Path(f"data/{map_name}_buildings.json")
+    buildings = load_buildings(buildings_path)
     print(f"Loaded {len(buildings)} buildings")
 
     pygame.init()
     screen = pygame.display.set_mode((WIN_W, WIN_H))
-    pygame.display.set_caption("B-Plane Collision Prediction — Space: pause | G: ghosts | T: trails | V: velocity | S: sigma bands")
+    pygame.display.set_caption("B-Plane Collision Prediction — Enhanced Map Navigation")
     clock = pygame.time.Clock()
 
     w2s, bounds, base_scale, (base_offx, base_offy) = make_projector(nodes, WIN_W, WIN_H, MARGIN)
@@ -955,6 +1137,7 @@ def main():
     dragging = False
     last_mouse = (0, 0)
     show_buildings = len(buildings) > 0  # Show buildings by default if available
+    show_minimap = True  # Minimap enabled by default
 
     G = RoadGraph(nodes, edges)
     vehicles = [Vehicle(G, i) for i in range(NUM_AGENTS)]
@@ -968,6 +1151,9 @@ def main():
     # Animation timing
     sim_time = 0.0
     paused = False
+    
+    # Keyboard control state
+    keys_pressed = set()
 
     running = True
     while running:
@@ -982,10 +1168,10 @@ def main():
                 if ev.button == 3:
                     dragging = True
                     last_mouse = ev.pos
-                elif ev.button == 4:
-                    scale *= 1.1
-                elif ev.button == 5:
-                    scale = max(0.1, scale / 1.1)
+                elif ev.button == 4:  # Scroll up
+                    scale = min(MAX_ZOOM, scale * 1.1)
+                elif ev.button == 5:  # Scroll down
+                    scale = max(MIN_ZOOM, scale / 1.1)
             elif ev.type == pygame.MOUSEBUTTONUP:
                 if ev.button == 3:
                     dragging = False
@@ -996,6 +1182,8 @@ def main():
                 pan[1] += (my - ly)
                 last_mouse = ev.pos
             elif ev.type == pygame.KEYDOWN:
+                keys_pressed.add(ev.key)
+                
                 if ev.key == pygame.K_r:
                     scale = 1.0; pan = [0.0, 0.0]
                 elif ev.key == pygame.K_u:
@@ -1024,8 +1212,26 @@ def main():
                 elif ev.key == pygame.K_s:
                     global SHOW_SIGMA_BANDS
                     SHOW_SIGMA_BANDS = not SHOW_SIGMA_BANDS
+                elif ev.key == pygame.K_m:
+                    show_minimap = not show_minimap
                 elif ev.key == pygame.K_SPACE:
                     paused = not paused
+            elif ev.type == pygame.KEYUP:
+                keys_pressed.discard(ev.key)
+        
+        # Continuous keyboard controls for smooth panning and zooming
+        if pygame.K_w in keys_pressed or pygame.K_UP in keys_pressed:
+            pan[1] += PAN_SPEED
+        if pygame.K_s in keys_pressed or pygame.K_DOWN in keys_pressed:
+            pan[1] -= PAN_SPEED
+        if pygame.K_a in keys_pressed or pygame.K_LEFT in keys_pressed:
+            pan[0] += PAN_SPEED
+        if pygame.K_d in keys_pressed or pygame.K_RIGHT in keys_pressed:
+            pan[0] -= PAN_SPEED
+        if pygame.K_q in keys_pressed or pygame.K_MINUS in keys_pressed:
+            scale = max(MIN_ZOOM, scale - ZOOM_SPEED)
+        if pygame.K_e in keys_pressed or pygame.K_EQUALS in keys_pressed:
+            scale = min(MAX_ZOOM, scale + ZOOM_SPEED)
 
         # Update vehicles (only when not paused)
         if not paused:
@@ -1052,7 +1258,7 @@ def main():
         
         # Draw buildings first (background layer)
         if show_buildings and buildings:
-            draw_buildings(screen, buildings, w2s, scale, pan)
+            draw_buildings(screen, buildings, w2s, scale, pan, scale)
         
         # Draw roads on top of buildings
         font_small = pygame.font.SysFont("Arial", 11, bold=True)
@@ -1067,11 +1273,11 @@ def main():
             v.draw(screen, w2s, scale, pan, base_scale, font_small, time_pulse)
 
         # ========== Professional UI Panel ==========
-        panel_font = pygame.font.SysFont("Arial", 13)
+        panel_font = pygame.font.SysFont("Arial", 12)
         title_font = pygame.font.SysFont("Arial", 15, bold=True)
         
-        # Top control panel (expanded for extra line)
-        panel_height = 85
+        # Top control panel (expanded for extra lines)
+        panel_height = 100
         panel_surf = pygame.Surface((WIN_W, panel_height))
         panel_surf.fill((30, 35, 45))
         panel_surf.set_alpha(240)
@@ -1081,33 +1287,66 @@ def main():
         title = title_font.render("Vehicle Collision Prediction Simulation", True, (200, 220, 240))
         screen.blit(title, (15, 10))
         
-        # Controls (split into two lines for readability)
-        controls1 = panel_font.render("Controls: Right-drag=Pan | Wheel=Zoom | R=Reset | Space=Pause", True, (160, 175, 195))
-        controls2 = panel_font.render("Toggles: G=Ghosts | T=Trails | V=VelArrows | S=SigmaBands | U=Uncertainty | P=Pred | B=Buildings | L=Labels", True, (160, 175, 195))
-        screen.blit(controls1, (15, 32))
-        screen.blit(controls2, (15, 48))
+        # Controls (split into three lines for readability)
+        controls1 = panel_font.render("Navigation: WASD/Arrows=Pan | Q/E or -/+=Zoom | Right-drag=Pan | Wheel=Zoom | R=Reset", True, (160, 175, 195))
+        controls2 = panel_font.render("View: M=Minimap | B=Buildings | L=Labels | U=Uncertainty | P=Predictions", True, (160, 175, 195))
+        controls3 = panel_font.render("Effects: G=Ghosts | T=Trails | V=VelArrows | S=SigmaBands | Space=Pause", True, (160, 175, 195))
+        screen.blit(controls1, (15, 30))
+        screen.blit(controls2, (15, 46))
+        screen.blit(controls3, (15, 62))
         
         # Status indicators
         status_items = []
+        status_items.append(f"Zoom: {scale:.2f}x")
         status_items.append(f"Vehicles: {NUM_AGENTS}")
-        status_items.append(f"{'⏸' if paused else '▶'} {'PAUSED' if paused else 'Running'}")
-        status_items.append(f"Ghosts: {'✓' if SHOW_GHOSTS else '✗'}")
-        status_items.append(f"Trails: {'✓' if SHOW_TRAILS else '✗'}")
-        status_items.append(f"VelArrows: {'✓' if SHOW_VELOCITY_ARROWS else '✗'}")
-        status_items.append(f"Σ-Bands: {'✓' if SHOW_SIGMA_BANDS else '✗'}")
+        status_items.append(f"{'⏸ PAUSED' if paused else '▶ Running'}")
         status_items.append(f"FPS: {int(clock.get_fps())}")
         
         status_text = " | ".join(status_items)
         status_render = panel_font.render(status_text, True, (140, 160, 180))
-        screen.blit(status_render, (15, 65))
+        screen.blit(status_render, (15, 80))
         
-        # B-plane visualization panel (replaces old collision warning)
+        # B-plane visualization panel (when collision detected)
         if collision_detected and collision_pair[0] is not None:
             draw_bplane_panel(screen, vehicles, collision_pair, collision_prob, panel_font, sim_time)
         
-        # Legend panel (bottom right)
+        # Minimap (top-right, below control panel)
+        if show_minimap:
+            draw_minimap(screen, nodes, edges, vehicles, bounds, pan, scale)
+        
+        # Zoom indicator (bottom-left corner)
+        zoom_indicator_x = 15
+        zoom_indicator_y = WIN_H - 60
+        zoom_surf = pygame.Surface((120, 50), pygame.SRCALPHA)
+        pygame.draw.rect(zoom_surf, (30, 35, 45, 220), zoom_surf.get_rect(), border_radius=6)
+        pygame.draw.rect(zoom_surf, (80, 90, 110, 180), zoom_surf.get_rect(), width=2, border_radius=6)
+        screen.blit(zoom_surf, (zoom_indicator_x, zoom_indicator_y))
+        
+        # Zoom text
+        zoom_title = panel_font.render("Zoom Level", True, (180, 190, 200))
+        screen.blit(zoom_title, (zoom_indicator_x + 10, zoom_indicator_y + 8))
+        
+        # Zoom value with color coding
+        zoom_color = (120, 180, 220) if scale >= 1.0 else (255, 200, 120)
+        zoom_value = title_font.render(f"{scale:.2f}x", True, zoom_color)
+        screen.blit(zoom_value, (zoom_indicator_x + 10, zoom_indicator_y + 25))
+        
+        # Zoom level description
+        zoom_desc_font = pygame.font.SysFont("Arial", 9)
+        if scale < 0.7:
+            zoom_desc = "Major Roads"
+        elif scale < 1.2:
+            zoom_desc = "Main Roads"
+        elif scale < 1.8:
+            zoom_desc = "Local Roads"
+        else:
+            zoom_desc = "All Roads"
+        zoom_desc_text = zoom_desc_font.render(zoom_desc, True, (140, 150, 160))
+        screen.blit(zoom_desc_text, (zoom_indicator_x + 75, zoom_indicator_y + 31))
+        
+        # Legend panel (bottom right) - Compact version
         legend_width = 200
-        legend_height = 120
+        legend_height = 110
         legend_surf = pygame.Surface((legend_width, legend_height))
         legend_surf.fill((35, 40, 50))
         legend_surf.set_alpha(230)
@@ -1116,28 +1355,29 @@ def main():
         legend_font = pygame.font.SysFont("Arial", 11)
         legend_y = WIN_H - legend_height - 10
         
-        legend_title = panel_font.render("Legend", True, (200, 220, 240))
+        legend_title = panel_font.render("Road Types", True, (200, 220, 240))
         screen.blit(legend_title, (WIN_W - legend_width - 10, legend_y))
-        legend_y += 20
+        legend_y += 22
         
-        # Road types
-        road_label = legend_font.render("Road Types:", True, (180, 190, 200))
-        screen.blit(road_label, (WIN_W - legend_width - 8, legend_y))
+        # Road type samples
+        pygame.draw.line(screen, (255, 200, 100), (WIN_W - legend_width - 5, legend_y + 5), (WIN_W - legend_width + 15, legend_y + 5), 4)
+        text = legend_font.render(" Motorway/Highway", True, (180, 190, 200))
+        screen.blit(text, (WIN_W - legend_width + 20, legend_y))
         legend_y += 18
         
-        pygame.draw.line(screen, (255, 200, 100), (WIN_W - legend_width - 5, legend_y + 7), (WIN_W - legend_width + 15, legend_y + 7), 3)
-        text = legend_font.render(" Motorway", True, (180, 190, 200))
-        screen.blit(text, (WIN_W - legend_width + 20, legend_y + 2))
+        pygame.draw.line(screen, (255, 235, 150), (WIN_W - legend_width - 5, legend_y + 5), (WIN_W - legend_width + 15, legend_y + 5), 3)
+        text = legend_font.render(" Primary Road", True, (180, 190, 200))
+        screen.blit(text, (WIN_W - legend_width + 20, legend_y))
         legend_y += 18
         
-        pygame.draw.line(screen, (255, 235, 150), (WIN_W - legend_width - 5, legend_y + 7), (WIN_W - legend_width + 15, legend_y + 7), 3)
-        text = legend_font.render(" Primary", True, (180, 190, 200))
-        screen.blit(text, (WIN_W - legend_width + 20, legend_y + 2))
+        pygame.draw.line(screen, (255, 255, 200), (WIN_W - legend_width - 5, legend_y + 5), (WIN_W - legend_width + 15, legend_y + 5), 3)
+        text = legend_font.render(" Secondary Road", True, (180, 190, 200))
+        screen.blit(text, (WIN_W - legend_width + 20, legend_y))
         legend_y += 18
         
-        pygame.draw.line(screen, (255, 255, 255), (WIN_W - legend_width - 5, legend_y + 7), (WIN_W - legend_width + 15, legend_y + 7), 3)
+        pygame.draw.line(screen, (255, 255, 255), (WIN_W - legend_width - 5, legend_y + 5), (WIN_W - legend_width + 15, legend_y + 5), 2)
         text = legend_font.render(" Residential", True, (180, 190, 200))
-        screen.blit(text, (WIN_W - legend_width + 20, legend_y + 2))
+        screen.blit(text, (WIN_W - legend_width + 20, legend_y))
 
         pygame.display.flip()
 

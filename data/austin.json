@@ -1,0 +1,84 @@
+{
+  "nodes": {
+    "96819624": {
+      "x": -81.537502,
+      "y": 30.274994
+    },
+    "96902723": {
+      "x": -81.5374705,
+      "y": 30.2746192
+    },
+    "5983781799": {
+      "x": -81.5380704,
+      "y": 30.2749994
+    }
+  },
+  "edges": [
+    {
+      "from": "96819624",
+      "to": "5983781799",
+      "length_m": 54.58664847576049,
+      "name": "Alumni Way",
+      "highway": "residential",
+      "oneway": false,
+      "maxspeed": null,
+      "lanes": null
+    },
+    {
+      "from": "96819624",
+      "to": "96902723",
+      "length_m": 41.785552306439975,
+      "name": "Burning Leaf Court",
+      "highway": "residential",
+      "oneway": false,
+      "maxspeed": null,
+      "lanes": null
+    },
+    {
+      "from": "96902723",
+      "to": "96819624",
+      "length_m": 41.785552306439975,
+      "name": "Burning Leaf Court",
+      "highway": "residential",
+      "oneway": false,
+      "maxspeed": null,
+      "lanes": null
+    },
+    {
+      "from": "5983781799",
+      "to": "96819624",
+      "length_m": 54.58664847576049,
+      "name": "Alumni Way",
+      "highway": "residential",
+      "oneway": false,
+      "maxspeed": null,
+      "lanes": null
+    },
+    {
+      "from": "5983781799",
+      "to": "5983781799",
+      "length_m": 77.11039359851287,
+      "name": [
+        "Autumn Leaf Court",
+        "Alumni Way"
+      ],
+      "highway": "residential",
+      "oneway": false,
+      "maxspeed": null,
+      "lanes": null
+    },
+    {
+      "from": "5983781799",
+      "to": "5983781799",
+      "length_m": 77.11039359851287,
+      "name": [
+        "Autumn Leaf Court",
+        "Alumni Way"
+      ],
+      "highway": "residential",
+      "oneway": false,
+      "maxspeed": null,
+      "lanes": null
+    }
+  ]
+}

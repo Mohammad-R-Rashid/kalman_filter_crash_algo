@@ -1,0 +1,32 @@
+{
+  "current_map": "wampus",
+  "maps": {
+    "wampus": {
+      "bbox": {
+        "north": 30.29,
+        "south": 30.26,
+        "east": -97.73,
+        "west": -97.75
+      },
+      "description": "Wampus area"
+    },
+    "austin": {
+      "bbox": {
+        "north": 30.295,
+        "south": 30.275,
+        "east": -97.735,
+        "west": -97.755
+      },
+      "description": "Austin West Campus & UT Area"
+    },
+    "ut_campus": {
+      "bbox": {
+        "north": 30.2900,
+        "south": 30.2820,
+        "east": -97.7350,
+        "west": -97.7420
+      },
+      "description": "UT Campus core area"
+    }
+  }
+}
