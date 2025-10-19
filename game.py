@@ -8,6 +8,7 @@ import pygame
 import numpy as np
 from dataclasses import dataclass
 from typing import List, Tuple, Optional
+from scipy.stats import chi2
 
 # ---------- Display / Style ----------
 WIN_W, WIN_H = 1200, 800
@@ -122,7 +123,6 @@ NUM_PRED_STEPS = int(PREDICTION_HORIZON / DT)
 PROCESS_NOISE_POS = 0.5  # m
 PROCESS_NOISE_VEL = 0.2  # m/s
 PROCESS_NOISE_HEADING = 0.05  # rad
-PROCESS_NOISE_YAW_RATE = 0.02  # rad/s
 
 # Visualization
 SHOW_UNCERTAINTY = True
@@ -189,30 +189,28 @@ def highway_style(hwy):
 # ---------- State Vector & UKF Helpers ----------
 @dataclass
 class VehicleState:
-    """State vector: [x, y, v, psi, psi_dot]
+    """State vector: [x, y, v, psi]
     x, y: position (m)
     v: speed (m/s)
     psi: heading angle (rad)
-    psi_dot: yaw rate (rad/s)
     """
     x: float
     y: float
     v: float
     psi: float
-    psi_dot: float
     
     def to_array(self) -> np.ndarray:
-        return np.array([self.x, self.y, self.v, self.psi, self.psi_dot])
+        return np.array([self.x, self.y, self.v, self.psi])
     
     @staticmethod
     def from_array(arr: np.ndarray) -> 'VehicleState':
-        return VehicleState(arr[0], arr[1], arr[2], arr[3], arr[4])
+        return VehicleState(arr[0], arr[1], arr[2], arr[3])
 
 @dataclass
 class PredictedState:
     """Predicted state with uncertainty"""
     state: VehicleState
-    covariance: np.ndarray  # 5x5 state covariance
+    covariance: np.ndarray  # 4x4 state covariance
     time_offset: float  # seconds from current time
 
 def bicycle_model_step(state: VehicleState, delta: float, accel: float, dt: float, L: float) -> VehicleState:
@@ -226,88 +224,167 @@ def bicycle_model_step(state: VehicleState, delta: float, accel: float, dt: floa
     y_new = state.y + state.v * math.sin(state.psi) * dt
     v_new = state.v + accel * dt
     psi_new = state.psi + (state.v / L) * math.tan(delta) * dt
-    psi_dot_new = (state.v / L) * math.tan(delta)
     
     # Normalize heading to [-pi, pi]
     while psi_new > math.pi: psi_new -= 2 * math.pi
     while psi_new < -math.pi: psi_new += 2 * math.pi
     
-    return VehicleState(x_new, y_new, v_new, psi_new, psi_dot_new)
+    return VehicleState(x_new, y_new, v_new, psi_new)
 
-def propagate_covariance_simple(P: np.ndarray, dt: float) -> np.ndarray:
-    """Simplified covariance propagation (placeholder for full UKF)
-    In reality, this would use Jacobian or sigma points
+def ukf_predict_step(state_array: np.ndarray, P: np.ndarray, Q: np.ndarray, 
+                     delta: float, accel: float, dt: float, L: float,
+                     alpha: float = 1e-3, beta: float = 2.0, kappa: float = 0.0) -> Tuple[np.ndarray, np.ndarray]:
+    """UKF prediction step using sigma points
+    Returns: (predicted_state, predicted_covariance)
     """
-    # Add process noise
-    Q = np.diag([
-        PROCESS_NOISE_POS**2,
-        PROCESS_NOISE_POS**2,
-        PROCESS_NOISE_VEL**2,
-        PROCESS_NOISE_HEADING**2,
-        PROCESS_NOISE_YAW_RATE**2
-    ]) * dt
+    n = 4  # state dimension
+    lambda_val = alpha**2 * (n + kappa) - n
     
-    # Simple propagation: P_new ≈ P + Q (actual UKF would use F*P*F' + Q)
-    return P + Q
+    # Generate sigma points
+    sqrt_P = np.linalg.cholesky((n + lambda_val) * P)
+    sigma_points = np.zeros((n, 2*n + 1))
+    sigma_points[:, 0] = state_array
+    for i in range(n):
+        sigma_points[:, i+1] = state_array + sqrt_P[:, i]
+        sigma_points[:, i+1+n] = state_array - sqrt_P[:, i]
+    
+    # Propagate sigma points through bicycle model
+    sigma_nexts = np.zeros_like(sigma_points)
+    for i in range(2*n + 1):
+        s = VehicleState.from_array(sigma_points[:, i])
+        s_next = bicycle_model_step(s, delta, accel, dt, L)
+        sigma_nexts[:, i] = s_next.to_array()
+    
+    # Compute weights
+    weights_m = np.zeros(2*n + 1)
+    weights_c = np.zeros(2*n + 1)
+    weights_m[0] = lambda_val / (n + lambda_val)
+    weights_c[0] = lambda_val / (n + lambda_val) + (1 - alpha**2 + beta)
+    for i in range(1, 2*n + 1):
+        weights_m[i] = 1 / (2 * (n + lambda_val))
+        weights_c[i] = 1 / (2 * (n + lambda_val))
+    
+    # Compute predicted mean
+    predicted_state = np.sum(sigma_nexts * weights_m.reshape(1, -1), axis=1)
+    
+    # Compute predicted covariance
+    predicted_P = np.zeros((n, n))
+    for i in range(2*n + 1):
+        diff = (sigma_nexts[:, i] - predicted_state).reshape(-1, 1)
+        predicted_P += weights_c[i] * diff @ diff.T
+    predicted_P += Q
+    
+    return predicted_state, predicted_P
 
-def predict_trajectory(state: VehicleState, P: np.ndarray, delta: float, accel: float, 
+def predict_trajectory(state: VehicleState, P: np.ndarray, Q: np.ndarray, delta: float, accel: float, 
                        n_steps: int, dt: float, L: float) -> List[PredictedState]:
-    """Predict vehicle trajectory with uncertainty over n_steps"""
+    """Predict vehicle trajectory with uncertainty over n_steps using UKF"""
     predictions = []
-    current_state = state
+    current_state = state.to_array()
     current_P = P.copy()
     
     for i in range(n_steps):
-        # Propagate state
-        current_state = bicycle_model_step(current_state, delta, accel, dt, L)
-        # Propagate covariance
-        current_P = propagate_covariance_simple(current_P, dt)
+        # Propagate state and covariance using UKF
+        current_state, current_P = ukf_predict_step(current_state, current_P, Q, delta, accel, dt, L)
         
         predictions.append(PredictedState(
-            state=current_state,
+            state=VehicleState.from_array(current_state),
             covariance=current_P.copy(),
             time_offset=(i + 1) * dt
         ))
     
     return predictions
 
-def compute_collision_probability_api_placeholder(ego_pred: PredictedState, 
-                                                   other_pred: PredictedState) -> float:
-    """Placeholder for API call to compute collision probability using b-plane method
+def compute_collision_probability_bplane(ego_pred: PredictedState, 
+                                         other_pred: PredictedState,
+                                         confidence: float = 0.95) -> float:
+    """Compute collision probability using b-plane method from celestial mechanics
     
-    In production, this would:
+    This implements the full b-plane approach:
     1. Compute relative state: delta_x = ego - other
     2. Compute combined covariance: P_delta = P_ego + P_other
     3. Project to b-plane (plane perpendicular to relative velocity)
-    4. Compute probability that miss-distance falls within collision footprint
-    
-    For now, return simple distance-based estimate
+    4. Use Mahalanobis distance to compute collision probability
     """
-    dx = ego_pred.state.x - other_pred.state.x
-    dy = ego_pred.state.y - other_pred.state.y
-    dist = math.sqrt(dx**2 + dy**2)
+    # Extract states
+    A_x, A_y, A_v, A_yaw = ego_pred.state.x, ego_pred.state.y, ego_pred.state.v, ego_pred.state.psi
+    B_x, B_y, B_v, B_yaw = other_pred.state.x, other_pred.state.y, other_pred.state.v, other_pred.state.psi
     
-    # Simple Gaussian approximation based on distance and uncertainty
-    # Extract position uncertainties (diagonal elements)
-    ego_std = math.sqrt(ego_pred.covariance[0, 0] + ego_pred.covariance[1, 1])
-    other_std = math.sqrt(other_pred.covariance[0, 0] + other_pred.covariance[1, 1])
-    combined_std = math.sqrt(ego_std**2 + other_std**2)
+    # Relative position vector (3D for cross products, z=0)
+    rel_pos = np.array([A_x - B_x, A_y - B_y, 0])
     
-    # Collision if within ~2 vehicle widths
-    collision_radius = 2 * VEHICLE_WIDTH
+    # Relative velocity vector
+    rel_vel = np.array([
+        A_v * np.cos(A_yaw) - B_v * np.cos(B_yaw),
+        A_v * np.sin(A_yaw) - B_v * np.sin(B_yaw),
+        0
+    ])
     
-    if combined_std < 1e-6:
-        return 1.0 if dist < collision_radius else 0.0
+    # Avoid divide-by-zero if vehicles have same velocity
+    rel_vel_norm = np.linalg.norm(rel_vel)
+    if rel_vel_norm < 1e-6:
+        # If relative velocity is tiny, just check distance
+        dist = np.linalg.norm(rel_pos[:2])
+        return 1.0 if dist < VEHICLE_WIDTH * 2 else 0.0
     
-    # Gaussian CDF approximation
-    z = (dist - collision_radius) / combined_std
-    if z < -3:
-        return 1.0
-    elif z > 3:
+    # Normalize relative velocity
+    rel_vel_normal = rel_vel / rel_vel_norm
+    
+    # Combined covariance (assume independent)
+    rel_P = ego_pred.covariance + other_pred.covariance
+    
+    # Construct orthogonal basis for b-plane (plane perpendicular to relative velocity)
+    # First basis vector: perpendicular to rel_vel in xy-plane
+    first_orth_basis = np.array([-rel_vel[1], rel_vel[0], 0])
+    first_orth_norm = np.linalg.norm(first_orth_basis)
+    if first_orth_norm < 1e-9:
         return 0.0
-    else:
-        # Rough approximation of collision probability
-        return max(0.0, min(1.0, math.exp(-z**2 / 2)))
+    first_orth_basis /= first_orth_norm
+    
+    # Second basis vector: perpendicular to both rel_vel and first_orth_basis
+    second_orth_basis = np.cross(first_orth_basis, rel_vel_normal)
+    second_orth_norm = np.linalg.norm(second_orth_basis)
+    if second_orth_norm < 1e-9:
+        return 0.0
+    second_orth_basis /= second_orth_norm
+    
+    # Project miss distance vector onto b-plane
+    # b is the component of rel_pos perpendicular to rel_vel
+    b = rel_pos - np.dot(rel_pos, rel_vel_normal) * rel_vel_normal
+    
+    # Transform covariance into b-plane coordinates (2D projection)
+    H_B = np.vstack([first_orth_basis[:2], second_orth_basis[:2]])  # 2x2 projection matrix
+    
+    # Project 4x4 covariance to 2x2 b-plane covariance (using position components only)
+    P_pos = rel_P[:2, :2]  # Extract 2x2 position covariance
+    P_B = H_B @ P_pos @ H_B.T
+    
+    # Ensure P_B is positive definite
+    try:
+        # Mahalanobis distance in b-plane
+        P_B_inv = np.linalg.inv(P_B)
+        d_square = b[:2].T @ P_B_inv @ b[:2]
+        
+        # Critical value for confidence level (chi-squared distribution with 2 DOF)
+        crit = chi2.ppf(confidence, df=2)
+        
+        # Collision probability based on whether we're inside the confidence ellipse
+        # The closer d_square is to 0, the higher the probability
+        if d_square < crit:
+            # Inside ellipse - high probability
+            # Scale probability: 1.0 at center, decreasing to threshold at boundary
+            probability = 1.0 - (d_square / crit) * (1.0 - COLLISION_THRESHOLD)
+            return min(1.0, max(0.0, probability))
+        else:
+            # Outside ellipse - probability decreases with distance
+            # Use exponential decay
+            excess = d_square - crit
+            probability = COLLISION_THRESHOLD * np.exp(-excess / crit)
+            return max(0.0, probability)
+    except np.linalg.LinAlgError:
+        # If matrix is singular, fall back to simple distance check
+        dist = np.linalg.norm(b[:2])
+        return 1.0 if dist < VEHICLE_WIDTH * 2 else 0.0
 
 def draw_uncertainty_ellipse(surf, center_x: int, center_y: int, 
                              P_2x2: np.ndarray, sigma: float, color, scale: float):
@@ -432,16 +509,23 @@ class Vehicle:
         
         self.state = VehicleState(
             x=x, y=y, v=speed, 
-            psi=heading, psi_dot=0.0
+            psi=heading
         )
         
-        # Initialize state covariance (5x5 matrix)
+        # Initialize state covariance (4x4 matrix)
         self.P = np.diag([
             1.0,  # x variance (m^2)
             1.0,  # y variance (m^2)
             0.5,  # v variance (m^2/s^2)
-            0.1,  # psi variance (rad^2)
-            0.05  # psi_dot variance (rad^2/s^2)
+            0.1   # psi variance (rad^2)
+        ])
+        
+        # Process noise covariance (4x4 matrix)
+        self.Q = np.diag([
+            PROCESS_NOISE_POS**2,
+            PROCESS_NOISE_POS**2,
+            PROCESS_NOISE_VEL**2,
+            PROCESS_NOISE_HEADING**2
         ])
         
         # Control inputs (simple controller)
@@ -555,15 +639,16 @@ class Vehicle:
         return self.steering_angle, accel
 
     def update(self, dt: float):
-        """Update vehicle state using bicycle model, constrained to roads"""
+        """Update vehicle state using bicycle model with UKF, constrained to roads"""
         # Get control inputs
         delta, accel = self._compute_control_inputs()
         
-        # Update state using bicycle model
-        self.state = bicycle_model_step(self.state, delta, accel, dt, VEHICLE_LENGTH)
-        
-        # Update covariance (simplified - real UKF would use sigma points)
-        self.P = propagate_covariance_simple(self.P, dt)
+        # Update state and covariance using UKF
+        state_array, self.P = ukf_predict_step(
+            self.state.to_array(), self.P, self.Q, 
+            delta, accel, dt, VEHICLE_LENGTH
+        )
+        self.state = VehicleState.from_array(state_array)
         
         # CONSTRAIN TO ROAD: Update position along edge (for road following)
         L = float(self.edge.get("length_m", 1.0))
@@ -607,10 +692,10 @@ class Vehicle:
         self.state.psi = blend * road_heading + (1 - blend) * self.state.psi
     
     def predict_future(self):
-        """Predict future trajectory using current state and simple assumptions"""
+        """Predict future trajectory using current state and UKF"""
         delta, accel = self._compute_control_inputs()
         self.predictions = predict_trajectory(
-            self.state, self.P, delta, accel,
+            self.state, self.P, self.Q, delta, accel,
             NUM_PRED_STEPS, DT, VEHICLE_LENGTH
         )
     
@@ -849,10 +934,10 @@ def compute_all_collision_probabilities(vehicles: List[Vehicle]):
             if not v1.predictions or not v2.predictions:
                 continue
             
-            # Check collision probability at each time step
+            # Check collision probability at each time step using b-plane method
             max_prob = 0.0
             for pred1, pred2 in zip(v1.predictions, v2.predictions):
-                prob = compute_collision_probability_api_placeholder(pred1, pred2)
+                prob = compute_collision_probability_bplane(pred1, pred2, confidence=0.95)
                 max_prob = max(max_prob, prob)
             
             # Store collision risk
