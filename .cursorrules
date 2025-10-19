@@ -1,0 +1,16 @@
+# Cursor Rules for hacktx_2025_fluffypandas
+
+## File Creation Restrictions
+- DO NOT create any .md files (markdown files) unless explicitly requested by the user
+- DO NOT create any summary files or documentation files
+- DO NOT create README files unless explicitly requested
+- DO NOT create any documentation or explanatory files without explicit user request
+
+## Code Focus
+- Focus on implementing functionality and code
+- Only create files that are essential for the project to run
+- Avoid creating unnecessary documentation or summary files
+- When in doubt, ask the user before creating any .md or documentation files
+
+## Project Context
+This appears to be a game/simulation project with Python files. Focus on the core functionality rather than documentation.
