@@ -33,7 +33,18 @@ class vehicle_simulation:
                 ])
 
                 if np.linalg.norm(rel_vel) < 1e-6:
-                    # avoid divide-by-zero if vehicles have same velocity
+                    # vehicles have same velocity - check distance-based collision
+                    rel_P = vehicleA.predicted_P + vehicleB.predicted_P
+                    P_pos = rel_P[:2, :2]  # position covariance only
+                    try:
+                        d_square = rel_pos[:2].T @ np.linalg.inv(P_pos) @ rel_pos[:2]
+                        crit = chi2.ppf(confidence, df=2)
+                        if d_square < crit:
+                            return True, i, j
+                    except np.linalg.LinAlgError:
+                        # fallback to simple distance if matrix singular
+                        if np.linalg.norm(rel_pos[:2]) < 5.0:  # 5m threshold
+                            return True, i, j
                     continue
 
                 rel_vel_normal = rel_vel / np.linalg.norm(rel_vel)
