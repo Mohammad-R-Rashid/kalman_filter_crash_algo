@@ -102,7 +102,12 @@ ARROW_ANG = math.radians(22)
 NUM_AGENTS = 10
 SPEED_MIN = 3.0   # m/s (slower vehicles)
 SPEED_MAX = 15.0  # m/s (faster vehicles - more variety)
-AGENT_COLORS = [(80, 200, 255), (255, 140, 90), (180, 255, 140), (250, 220, 80)]
+
+# Consistent color palette: teal (safe), amber (caution), red (danger)
+COLOR_SAFE = (80, 200, 180)      # Teal
+COLOR_CAUTION = (255, 180, 80)   # Amber
+COLOR_DANGER = (255, 100, 100)   # Red
+AGENT_COLORS = [COLOR_SAFE, (120, 180, 220), (160, 200, 160), (200, 200, 120)]
 
 # Lane parameters
 LANE_WIDTH = 3.5  # meters (standard lane width)
@@ -122,7 +127,14 @@ SHOW_UNCERTAINTY = True
 SHOW_PREDICTIONS = True
 SHOW_LABELS = True  # Show vehicle IDs and road names
 SHOW_LANE_MARKINGS = True  # Draw lane dividers on roads
+SHOW_GHOSTS = True  # Ghost trajectories
+SHOW_TRAILS = True  # Fading position trails
+SHOW_VELOCITY_ARROWS = True  # Velocity vectors
+SHOW_SIGMA_BANDS = True  # Multiple sigma bands (1σ, 2σ, 3σ)
 ELLIPSE_SIGMA = 2.0  # draw 2-sigma ellipses
+NUM_GHOST_STEPS = 5  # Number of ghost trajectory points
+TRAIL_LENGTH = 2.0  # seconds of trail history
+TRAIL_MAX_POINTS = 30  # Maximum trail points
 
 # ---------- Data IO ----------
 def load_graph(path: Path):
@@ -179,9 +191,19 @@ def highway_style(hwy):
     return HIGHWAY_STYLE.get(hwy, default)
 
 # ---------- Drawing Helpers ----------
+def draw_rounded_rect(surf, rect, color, radius=8, alpha=255):
+    """Draw a rounded rectangle with optional transparency"""
+    if alpha < 255:
+        temp_surf = pygame.Surface((rect.width, rect.height), pygame.SRCALPHA)
+        pygame.draw.rect(temp_surf, (*color[:3], alpha), temp_surf.get_rect(), border_radius=radius)
+        surf.blit(temp_surf, rect.topleft)
+    else:
+        pygame.draw.rect(surf, color, rect, border_radius=radius)
+
 def draw_uncertainty_ellipse(surf, center_x: int, center_y: int, 
-                             P_2x2: np.ndarray, sigma: float, color, scale: float):
-    """Draw uncertainty ellipse from 2x2 position covariance matrix"""
+                             P_2x2: np.ndarray, sigma: float, color, scale: float, 
+                             line_style='solid', alpha=255):
+    """Draw uncertainty ellipse from 2x2 position covariance matrix with various line styles"""
     try:
         eigenvalues, eigenvectors = np.linalg.eig(P_2x2)
         if np.any(eigenvalues < 0):
@@ -191,8 +213,8 @@ def draw_uncertainty_ellipse(surf, center_x: int, center_y: int,
         height = 2 * sigma * math.sqrt(max(eigenvalues[1], 0)) * scale
         angle = math.atan2(eigenvectors[1, 0], eigenvectors[0, 0])
         
-        points = []
         n_points = 32
+        points = []
         for i in range(n_points):
             theta = 2 * math.pi * i / n_points
             x_local = math.cos(theta) * width / 2
@@ -202,9 +224,32 @@ def draw_uncertainty_ellipse(surf, center_x: int, center_y: int,
             points.append((center_x + x_rot, center_y - y_rot))
         
         if len(points) > 2:
-            pygame.draw.polygon(surf, color, points, 1)
+            # Apply alpha if needed
+            draw_color = (*color[:3], alpha) if alpha < 255 and len(color) == 3 else color
+            
+            if line_style == 'solid':
+                pygame.draw.polygon(surf, draw_color, points, 1)
+            elif line_style == 'dashed':
+                # Draw dashed line
+                for i in range(0, len(points), 4):
+                    if i + 1 < len(points):
+                        pygame.draw.line(surf, draw_color, points[i], points[i + 1], 1)
+            elif line_style == 'dotted':
+                # Draw dotted line
+                for i in range(0, len(points), 3):
+                    pygame.draw.circle(surf, draw_color, (int(points[i][0]), int(points[i][1])), 1)
     except:
         pass
+
+def draw_sigma_bands(surf, center_x: int, center_y: int, P_2x2: np.ndarray, 
+                     color, scale: float, alpha=255):
+    """Draw 1σ (solid), 2σ (dashed), 3σ (dotted) uncertainty bands"""
+    if SHOW_SIGMA_BANDS:
+        draw_uncertainty_ellipse(surf, center_x, center_y, P_2x2, 1.0, color, scale, 'solid', alpha)
+        draw_uncertainty_ellipse(surf, center_x, center_y, P_2x2, 2.0, color, scale, 'dashed', alpha)
+        draw_uncertainty_ellipse(surf, center_x, center_y, P_2x2, 3.0, color, scale, 'dotted', alpha)
+    else:
+        draw_uncertainty_ellipse(surf, center_x, center_y, P_2x2, ELLIPSE_SIGMA, color, scale, 'solid', alpha)
 
 # ---------- Road Graph ----------
 class RoadGraph:
@@ -291,6 +336,11 @@ class Vehicle:
         
         # For collision detection flagging
         self.is_collision_risk = False
+        self.collision_probability = 0.0
+        
+        # Position history for trails
+        self.position_history = []  # List of (x, y, timestamp)
+        self.sim_time = 0.0
     
     def _get_num_lanes(self, edge) -> int:
         """Parse lane count from edge"""
@@ -377,6 +427,9 @@ class Vehicle:
     
     def update(self, dt: float):
         """Update vehicle state"""
+        # Update simulation time
+        self.sim_time += dt
+        
         # Compute control inputs
         accel, steering = self._compute_control_inputs()
         
@@ -385,6 +438,17 @@ class Vehicle:
         
         # Update road position
         x, y, v, psi = self.algo_vehicle.external_state
+        
+        # Track position history for trails
+        if SHOW_TRAILS:
+            self.position_history.append((x, y, self.sim_time))
+            # Keep only recent history
+            cutoff_time = self.sim_time - TRAIL_LENGTH
+            self.position_history = [(px, py, t) for px, py, t in self.position_history if t >= cutoff_time]
+            # Limit max points
+            if len(self.position_history) > TRAIL_MAX_POINTS:
+                self.position_history = self.position_history[-TRAIL_MAX_POINTS:]
+        
         L = max(float(self.edge.get("length_m", 1.0)), 1e-6)
         self.t += (v * dt) / L
         
@@ -428,17 +492,95 @@ class Vehicle:
         lat = y_m / self.G.m_per_deg_lat
         return lon, lat
     
-    def draw(self, surf, world_to_screen, scale, pan, base_scale, font):
-        """Draw vehicle with uncertainty ellipse and label"""
+    def draw(self, surf, world_to_screen, scale, pan, base_scale, font, time_pulse):
+        """Draw vehicle with all visual enhancements"""
         x, y, v, psi = self.algo_vehicle.external_state
         lon, lat = self.m_to_lonlat(x, y)
         px, py = world_to_screen(lon, lat, scale=scale, pan=pan)
         
-        # Color based on collision risk
-        color = self.color
+        # Calculate proper scale from meters to pixels
+        # base_scale is pixels per degree, we need pixels per meter
+        meters_to_pixels = base_scale / self.G.m_per_deg_lon * scale
+        
+        # Determine color based on risk level
         is_high_risk = self.is_collision_risk
         if is_high_risk:
-            color = (255, 80, 80)  # Red for collision risk
+            if self.collision_probability > 0.5:
+                color = COLOR_DANGER
+            else:
+                color = COLOR_CAUTION
+        else:
+            color = self.color
+        
+        # Draw fading trail
+        if SHOW_TRAILS and len(self.position_history) > 1:
+            for i in range(len(self.position_history) - 1):
+                px1, py1, t1 = self.position_history[i]
+                px2, py2, t2 = self.position_history[i + 1]
+                
+                # Convert to screen coordinates
+                lon1, lat1 = self.m_to_lonlat(px1, py1)
+                lon2, lat2 = self.m_to_lonlat(px2, py2)
+                spx1, spy1 = world_to_screen(lon1, lat1, scale=scale, pan=pan)
+                spx2, spy2 = world_to_screen(lon2, lat2, scale=scale, pan=pan)
+                
+                # Exponential alpha decay based on age
+                age = self.sim_time - t1
+                alpha = int(200 * math.exp(-age / (TRAIL_LENGTH * 0.4)))
+                alpha = max(20, min(200, alpha))
+                
+                # Draw trail segment with alpha
+                trail_surf = pygame.Surface((abs(spx2 - spx1) + 4, abs(spy2 - spy1) + 4), pygame.SRCALPHA)
+                trail_color = (*color[:3], alpha)
+                local_p1 = (2, 2) if spx1 <= spx2 else (abs(spx2 - spx1) + 2, 2)
+                local_p2 = (abs(spx2 - spx1) + 2, abs(spy2 - spy1) + 2) if spx2 >= spx1 else (2, abs(spy2 - spy1) + 2)
+                if spy1 > spy2:
+                    local_p1 = (local_p1[0], abs(spy2 - spy1) + 2)
+                    local_p2 = (local_p2[0], 2)
+                pygame.draw.line(trail_surf, trail_color, local_p1, local_p2, 2)
+                surf.blit(trail_surf, (min(spx1, spx2) - 2, min(spy1, spy2) - 2))
+        
+        # Draw ghost trajectories (future positions)
+        if SHOW_GHOSTS:
+            ghost_dt = 0.3  # Time step between ghost positions
+            for i in range(1, NUM_GHOST_STEPS + 1):
+                # Simple forward projection (could be improved with actual prediction)
+                ghost_x = x + v * math.cos(psi) * ghost_dt * i
+                ghost_y = y + v * math.sin(psi) * ghost_dt * i
+                ghost_lon, ghost_lat = self.m_to_lonlat(ghost_x, ghost_y)
+                ghost_px, ghost_py = world_to_screen(ghost_lon, ghost_lat, scale=scale, pan=pan)
+                
+                # Fading alpha for ghosts
+                alpha = int(150 * (1.0 - i / (NUM_GHOST_STEPS + 1)))
+                ghost_color = (*color[:3], alpha)
+                
+                # Draw small circle for ghost position
+                ghost_surf = pygame.Surface((10, 10), pygame.SRCALPHA)
+                pygame.draw.circle(ghost_surf, ghost_color, (5, 5), 3)
+                surf.blit(ghost_surf, (ghost_px - 5, ghost_py - 5))
+        
+        # Draw velocity arrow
+        if SHOW_VELOCITY_ARROWS:
+            arrow_len = min(40, v * 3)  # Scale with velocity
+            arrow_end_x = px + arrow_len * math.cos(psi)
+            arrow_end_y = py - arrow_len * math.sin(psi)  # Negative because screen Y is inverted
+            
+            # Draw arrow with alpha
+            vel_surf = pygame.Surface((abs(int(arrow_end_x - px)) + 10, abs(int(arrow_end_y - py)) + 10), pygame.SRCALPHA)
+            vel_color = (*color[:3], 180)
+            start_local = (5, 5)
+            end_local = (int(arrow_end_x - px) + 5, int(arrow_end_y - py) + 5)
+            pygame.draw.line(vel_surf, vel_color, start_local, end_local, 2)
+            # Arrow head
+            arrow_angle = psi
+            head_len = 6
+            left_x = arrow_end_x - head_len * math.cos(arrow_angle - math.radians(25))
+            left_y = arrow_end_y + head_len * math.sin(arrow_angle - math.radians(25))
+            right_x = arrow_end_x - head_len * math.cos(arrow_angle + math.radians(25))
+            right_y = arrow_end_y + head_len * math.sin(arrow_angle + math.radians(25))
+            pygame.draw.line(vel_surf, vel_color, end_local, (int(left_x - px) + 5, int(left_y - py) + 5), 2)
+            pygame.draw.line(vel_surf, vel_color, end_local, (int(right_x - px) + 5, int(right_y - py) + 5), 2)
+            surf.blit(vel_surf, (min(px, int(arrow_end_x)) - 5, min(py, int(arrow_end_y)) - 5))
         
         # Draw vehicle as arrow
         tip = (px, py)
@@ -448,46 +590,47 @@ class Vehicle:
         right = (tip[0] - ARROW_LEN * math.cos(psi + ARROW_ANG),
                  tip[1] + ARROW_LEN * math.sin(psi + ARROW_ANG))
         
-        # Outline
-        outline_width = 6 if is_high_risk else 5
-        pygame.draw.line(surf, (40, 40, 50), tail, tip, outline_width)
-        pygame.draw.line(surf, (40, 40, 50), tip, left, outline_width)
-        pygame.draw.line(surf, (40, 40, 50), tip, right, outline_width)
+        # Outline with glow for high risk
+        outline_width = 7 if is_high_risk else 5
+        outline_color = (255, 100, 80) if is_high_risk else (40, 40, 50)
+        pygame.draw.line(surf, outline_color, tail, tip, outline_width)
+        pygame.draw.line(surf, outline_color, tip, left, outline_width)
+        pygame.draw.line(surf, outline_color, tip, right, outline_width)
         
         # Body
-        line_width = 4 if is_high_risk else 3
+        line_width = 5 if is_high_risk else 3
         pygame.draw.line(surf, color, tail, tip, line_width)
         pygame.draw.line(surf, color, tip, left, line_width)
         pygame.draw.line(surf, color, tip, right, line_width)
         
-        # Label
+        # Improved label with rounded dark chip
         if SHOW_LABELS:
             speed_kmh = v * 3.6
-            label_text = font.render(f"V{self.id} ({speed_kmh:.0f}km/h)", True, (40, 40, 50))
-            label_rect = label_text.get_rect(center=(px, py - 22))
+            label_text = font.render(f"V{self.id} {speed_kmh:.0f}km/h", True, (240, 240, 245))
+            label_rect = label_text.get_rect(center=(px, py - 26))
             
-            bg_rect = label_rect.inflate(6, 3)
-            bg_surface = pygame.Surface((bg_rect.width, bg_rect.height))
-            bg_surface.fill((255, 255, 255))
-            bg_surface.set_alpha(220)
-            surf.blit(bg_surface, bg_rect)
+            # Dark rounded background
+            bg_rect = label_rect.inflate(12, 6)
+            draw_rounded_rect(surf, bg_rect, (30, 35, 45), radius=6, alpha=220)
             surf.blit(label_text, label_rect)
             
-            # Lane indicator
+            # Lane indicator (if applicable)
             if USE_LANES and self.num_lanes > 1:
-                lane_color = (100, 150, 200)
-                lane_indicator_y = py - 35
+                lane_color = (120, 180, 220)
+                lane_indicator_y = py - 42
                 for i in range(self.num_lanes):
                     dot_x = px - (self.num_lanes - 1) * 3 + i * 6
                     if i == self.lane:
                         pygame.draw.circle(surf, lane_color, (dot_x, lane_indicator_y), 3)
                     else:
-                        pygame.draw.circle(surf, (180, 180, 180), (dot_x, lane_indicator_y), 2)
+                        pygame.draw.circle(surf, (100, 100, 100), (dot_x, lane_indicator_y), 2)
         
-        # Uncertainty ellipse
+        # Uncertainty ellipse with breathing animation
         if SHOW_UNCERTAINTY:
             P_2x2 = self.algo_vehicle.P[:2, :2]
-            draw_uncertainty_ellipse(surf, px, py, P_2x2, ELLIPSE_SIGMA, color, base_scale * scale)
+            # Breathing effect: pulse alpha between 180-255
+            breath_alpha = int(220 + 35 * math.sin(time_pulse * 2 * math.pi))
+            draw_sigma_bands(surf, px, py, P_2x2, color, meters_to_pixels, breath_alpha)
         
         # Draw predictions
         if SHOW_PREDICTIONS:
@@ -496,13 +639,12 @@ class Vehicle:
             if pred_x != 0 or pred_y != 0:
                 pred_lon, pred_lat = self.m_to_lonlat(pred_x, pred_y)
                 pred_px, pred_py = world_to_screen(pred_lon, pred_lat, scale=scale, pan=pan)
-                pygame.draw.circle(surf, color, (pred_px, pred_py), 4)
-                pygame.draw.line(surf, color + (100,) if len(color) == 3 else color, (px, py), (pred_px, pred_py), 1)
+                pygame.draw.circle(surf, color, (pred_px, pred_py), 5, 2)
                 
                 # Draw prediction uncertainty
                 P_pred_2x2 = self.algo_vehicle.predicted_P[:2, :2]
-                draw_uncertainty_ellipse(surf, pred_px, pred_py, P_pred_2x2, ELLIPSE_SIGMA, 
-                                        tuple(int(c * 0.5) for c in color), base_scale * scale)
+                draw_sigma_bands(surf, pred_px, pred_py, P_pred_2x2, 
+                               tuple(int(c * 0.7) for c in color[:3]), meters_to_pixels, 150)
 
 # ---------- Drawing helpers ----------
 def draw_buildings(screen, buildings, w2s, scale, pan):
@@ -627,6 +769,7 @@ def check_collisions(vehicles: List[Vehicle]):
     # Reset collision flags
     for v in vehicles:
         v.is_collision_risk = False
+        v.collision_probability = 0.0
     
     # Make sure all vehicles have predictions (ukf_predict needs to be called)
     for v in vehicles:
@@ -639,12 +782,154 @@ def check_collisions(vehicles: List[Vehicle]):
     # Check collision at 95% confidence level
     is_collision, idx1, idx2 = sim.is_collision(0.95)
     
+    # Calculate actual Pc for the pair (simplified - would need actual b-plane calculation)
+    collision_prob = 0.0
     if is_collision and idx1 is not None and idx2 is not None:
+        # Estimate collision probability based on distance and uncertainty
+        v1_pos = vehicles[idx1].algo_vehicle.external_state[:2]
+        v2_pos = vehicles[idx2].algo_vehicle.external_state[:2]
+        dist = np.linalg.norm(np.array(v1_pos) - np.array(v2_pos))
+        # Simple heuristic: closer = higher probability
+        collision_prob = max(0.01, min(0.99, math.exp(-dist / 20.0)))
+        
         vehicles[idx1].is_collision_risk = True
         vehicles[idx2].is_collision_risk = True
-        return True, idx1, idx2
+        vehicles[idx1].collision_probability = collision_prob
+        vehicles[idx2].collision_probability = collision_prob
+        return True, idx1, idx2, collision_prob
     
-    return False, None, None
+    return False, None, None, 0.0
+
+def draw_bplane_panel(screen, vehicles, collision_pair, collision_prob, font, time):
+    """Draw b-plane visualization panel when collision pair exists"""
+    if collision_pair[0] is None or collision_pair[1] is None:
+        return
+    
+    v1 = vehicles[collision_pair[0]]
+    v2 = vehicles[collision_pair[1]]
+    
+    # Panel dimensions and position (bottom-right)
+    panel_width = 280
+    panel_height = 220
+    panel_x = WIN_W - panel_width - 15
+    panel_y = WIN_H - panel_height - 15
+    
+    # Draw panel background
+    panel_surf = pygame.Surface((panel_width, panel_height), pygame.SRCALPHA)
+    pygame.draw.rect(panel_surf, (30, 35, 45, 240), panel_surf.get_rect(), border_radius=10)
+    pygame.draw.rect(panel_surf, (80, 90, 110, 200), panel_surf.get_rect(), width=2, border_radius=10)
+    screen.blit(panel_surf, (panel_x, panel_y))
+    
+    # Title
+    title_font = pygame.font.SysFont("Arial", 13, bold=True)
+    title = title_font.render("B-Plane Collision Analysis", True, (220, 230, 240))
+    screen.blit(title, (panel_x + 15, panel_y + 12))
+    
+    # Vehicle pair info
+    pair_text = font.render(f"V{collision_pair[0]} ↔ V{collision_pair[1]}", True, (200, 210, 220))
+    screen.blit(pair_text, (panel_x + 15, panel_y + 35))
+    
+    # Large Pc display
+    pc_font = pygame.font.SysFont("Arial", 32, bold=True)
+    pc_color = COLOR_DANGER if collision_prob > 0.5 else COLOR_CAUTION if collision_prob > 0.1 else COLOR_SAFE
+    pc_text = pc_font.render(f"{collision_prob:.3f}", True, pc_color)
+    pc_label = font.render("Pc:", True, (180, 190, 200))
+    screen.blit(pc_label, (panel_x + 15, panel_y + 60))
+    screen.blit(pc_text, (panel_x + 50, panel_y + 52))
+    
+    # Draw mini b-plane visualization (simplified)
+    bplane_center_x = panel_x + panel_width // 2
+    bplane_center_y = panel_y + 140
+    bplane_radius = 45
+    
+    # Draw coordinate axes
+    pygame.draw.line(screen, (100, 110, 120), 
+                    (bplane_center_x - bplane_radius - 5, bplane_center_y),
+                    (bplane_center_x + bplane_radius + 5, bplane_center_y), 1)
+    pygame.draw.line(screen, (100, 110, 120),
+                    (bplane_center_x, bplane_center_y - bplane_radius - 5),
+                    (bplane_center_x, bplane_center_y + bplane_radius + 5), 1)
+    
+    # Draw collision circle (represents combined vehicle radii)
+    collision_radius = int(bplane_radius * 0.25)
+    pygame.draw.circle(screen, COLOR_DANGER, (bplane_center_x, bplane_center_y), 
+                      collision_radius, 2)
+    
+    # Draw uncertainty ellipse (simplified 2D projection)
+    v1_pos = v1.algo_vehicle.external_state[:2]
+    v2_pos = v2.algo_vehicle.external_state[:2]
+    rel_pos = np.array(v2_pos) - np.array(v1_pos)
+    dist = np.linalg.norm(rel_pos)
+    
+    if dist > 0:
+        # Normalize and scale for display
+        display_offset = (rel_pos / dist) * min(bplane_radius * 0.7, dist * 0.5)
+        miss_x = int(bplane_center_x + display_offset[0])
+        miss_y = int(bplane_center_y - display_offset[1])  # Invert Y for screen coords
+        
+        # Draw miss point
+        pygame.draw.circle(screen, COLOR_SAFE, (miss_x, miss_y), 4)
+        pygame.draw.circle(screen, (240, 240, 245), (miss_x, miss_y), 2)
+        
+        # Draw uncertainty ellipse around miss point
+        # Simplified: draw circle proportional to combined uncertainty
+        P1 = v1.algo_vehicle.P[:2, :2]
+        P2 = v2.algo_vehicle.P[:2, :2]
+        combined_uncertainty = np.trace(P1 + P2) ** 0.5
+        unc_radius = int(min(30, combined_uncertainty * 2))
+        pygame.draw.circle(screen, (*COLOR_CAUTION, 120), (miss_x, miss_y), unc_radius, 1)
+    
+    # Labels
+    axis_font = pygame.font.SysFont("Arial", 9)
+    x_label = axis_font.render("ξ", True, (140, 150, 160))
+    y_label = axis_font.render("ζ", True, (140, 150, 160))
+    screen.blit(x_label, (bplane_center_x + bplane_radius + 8, bplane_center_y - 5))
+    screen.blit(y_label, (bplane_center_x - 5, bplane_center_y - bplane_radius - 12))
+    
+    # Distance info
+    dist_m = np.linalg.norm(np.array(v1_pos) - np.array(v2_pos))
+    dist_text = font.render(f"Distance: {dist_m:.1f}m", True, (180, 190, 200))
+    screen.blit(dist_text, (panel_x + 15, panel_y + 195))
+
+def draw_collision_badge(screen, vehicles, collision_pair, collision_prob, w2s, scale, pan, font):
+    """Draw on-map collision badge showing Pc"""
+    if collision_pair[0] is None or collision_pair[1] is None:
+        return
+    
+    v1 = vehicles[collision_pair[0]]
+    v2 = vehicles[collision_pair[1]]
+    
+    # Calculate midpoint between vehicles
+    v1_pos = v1.algo_vehicle.external_state[:2]
+    v2_pos = v2.algo_vehicle.external_state[:2]
+    mid_x = (v1_pos[0] + v2_pos[0]) / 2
+    mid_y = (v1_pos[1] + v2_pos[1]) / 2
+    
+    mid_lon, mid_lat = v1.m_to_lonlat(mid_x, mid_y)
+    badge_px, badge_py = w2s(mid_lon, mid_lat, scale=scale, pan=pan)
+    
+    # Draw badge
+    badge_text = f"Pc {collision_prob:.3f}"
+    badge_color = COLOR_DANGER if collision_prob > 0.5 else COLOR_CAUTION
+    text_render = font.render(badge_text, True, (255, 255, 255))
+    text_rect = text_render.get_rect(center=(badge_px, badge_py))
+    
+    # Background
+    bg_rect = text_rect.inflate(10, 6)
+    draw_rounded_rect(screen, bg_rect, badge_color, radius=6, alpha=230)
+    screen.blit(text_render, text_rect)
+    
+    # Draw connecting lines to both vehicles
+    v1_lon, v1_lat = v1.m_to_lonlat(v1_pos[0], v1_pos[1])
+    v2_lon, v2_lat = v2.m_to_lonlat(v2_pos[0], v2_pos[1])
+    v1_px, v1_py = w2s(v1_lon, v1_lat, scale=scale, pan=pan)
+    v2_px, v2_py = w2s(v2_lon, v2_lat, scale=scale, pan=pan)
+    
+    line_color = (*badge_color, 150)
+    line_surf = pygame.Surface((WIN_W, WIN_H), pygame.SRCALPHA)
+    pygame.draw.line(line_surf, line_color, (v1_px, v1_py), (badge_px, badge_py), 1)
+    pygame.draw.line(line_surf, line_color, (v2_px, v2_py), (badge_px, badge_py), 1)
+    screen.blit(line_surf, (0, 0))
 
 # ---------- Main ----------
 def main():
@@ -660,7 +945,7 @@ def main():
 
     pygame.init()
     screen = pygame.display.set_mode((WIN_W, WIN_H))
-    pygame.display.set_caption("Collision Prediction Simulation — Right-drag: pan | Wheel: zoom | R: reset | U: uncertainty | P: predictions | B: buildings")
+    pygame.display.set_caption("B-Plane Collision Prediction — Space: pause | G: ghosts | T: trails | V: velocity | S: sigma bands")
     clock = pygame.time.Clock()
 
     w2s, bounds, base_scale, (base_offx, base_offy) = make_projector(nodes, WIN_W, WIN_H, MARGIN)
@@ -678,10 +963,17 @@ def main():
     collision_timer = 0.0
     collision_detected = False
     collision_pair = (None, None)
+    collision_prob = 0.0
+    
+    # Animation timing
+    sim_time = 0.0
+    paused = False
 
     running = True
     while running:
         dt = clock.tick(60) / 1000.0
+        if not paused:
+            sim_time += dt
 
         for ev in pygame.event.get():
             if ev.type == pygame.QUIT:
@@ -720,18 +1012,40 @@ def main():
                 elif ev.key == pygame.K_n:
                     global USE_LANES
                     USE_LANES = not USE_LANES
+                elif ev.key == pygame.K_g:
+                    global SHOW_GHOSTS
+                    SHOW_GHOSTS = not SHOW_GHOSTS
+                elif ev.key == pygame.K_t:
+                    global SHOW_TRAILS
+                    SHOW_TRAILS = not SHOW_TRAILS
+                elif ev.key == pygame.K_v:
+                    global SHOW_VELOCITY_ARROWS
+                    SHOW_VELOCITY_ARROWS = not SHOW_VELOCITY_ARROWS
+                elif ev.key == pygame.K_s:
+                    global SHOW_SIGMA_BANDS
+                    SHOW_SIGMA_BANDS = not SHOW_SIGMA_BANDS
+                elif ev.key == pygame.K_SPACE:
+                    paused = not paused
 
-        # Update vehicles
-        for v in vehicles:
-            v.update(SIM_DT)
+        # Update vehicles (only when not paused)
+        if not paused:
+            for v in vehicles:
+                v.update(SIM_DT)
 
-        # Check for collisions periodically
-        collision_timer += dt
-        if collision_timer >= PREDICTION_UPDATE_INTERVAL:
-            collision_timer = 0.0
-            collision_detected, idx1, idx2 = check_collisions(vehicles)
-            if collision_detected:
-                collision_pair = (idx1, idx2)
+            # Check for collisions periodically
+            collision_timer += dt
+            if collision_timer >= PREDICTION_UPDATE_INTERVAL:
+                collision_timer = 0.0
+                collision_detected, idx1, idx2, cprob = check_collisions(vehicles)
+                if collision_detected:
+                    collision_pair = (idx1, idx2)
+                    collision_prob = cprob
+                else:
+                    collision_pair = (None, None)
+                    collision_prob = 0.0
+        
+        # Calculate time pulse for breathing animation (0 to 1)
+        time_pulse = (sim_time % 3.0) / 3.0
 
         # Draw
         screen.fill(BG)
@@ -744,16 +1058,20 @@ def main():
         font_small = pygame.font.SysFont("Arial", 11, bold=True)
         draw_edges(screen, nodes, edges, w2s, scale, pan, base_scale, scale, font_small)
         
+        # Draw on-map collision badge
+        if collision_detected and collision_pair[0] is not None:
+            draw_collision_badge(screen, vehicles, collision_pair, collision_prob, w2s, scale, pan, font_small)
+        
         # Draw vehicles on top
         for v in vehicles:
-            v.draw(screen, w2s, scale, pan, base_scale, font_small)
+            v.draw(screen, w2s, scale, pan, base_scale, font_small, time_pulse)
 
         # ========== Professional UI Panel ==========
         panel_font = pygame.font.SysFont("Arial", 13)
         title_font = pygame.font.SysFont("Arial", 15, bold=True)
         
-        # Top control panel
-        panel_height = 70
+        # Top control panel (expanded for extra line)
+        panel_height = 85
         panel_surf = pygame.Surface((WIN_W, panel_height))
         panel_surf.fill((30, 35, 45))
         panel_surf.set_alpha(240)
@@ -763,43 +1081,29 @@ def main():
         title = title_font.render("Vehicle Collision Prediction Simulation", True, (200, 220, 240))
         screen.blit(title, (15, 10))
         
-        # Controls
-        controls = panel_font.render("Controls: Right-drag=Pan | Wheel=Zoom | R=Reset | U=Uncertainty | P=Predictions | B=Buildings | L=Labels | N=Lanes", True, (160, 175, 195))
-        screen.blit(controls, (15, 32))
+        # Controls (split into two lines for readability)
+        controls1 = panel_font.render("Controls: Right-drag=Pan | Wheel=Zoom | R=Reset | Space=Pause", True, (160, 175, 195))
+        controls2 = panel_font.render("Toggles: G=Ghosts | T=Trails | V=VelArrows | S=SigmaBands | U=Uncertainty | P=Pred | B=Buildings | L=Labels", True, (160, 175, 195))
+        screen.blit(controls1, (15, 32))
+        screen.blit(controls2, (15, 48))
         
         # Status indicators
         status_items = []
         status_items.append(f"Vehicles: {NUM_AGENTS}")
-        status_items.append(f"Uncertainty: {'✓' if SHOW_UNCERTAINTY else '✗'}")
-        status_items.append(f"Predictions: {'✓' if SHOW_PREDICTIONS else '✗'}")
-        status_items.append(f"Labels: {'✓' if SHOW_LABELS else '✗'}")
-        status_items.append(f"Lanes: {'✓' if USE_LANES else '✗'}")
-        status_items.append(f"Buildings: {'✓' if show_buildings else '✗'}")
+        status_items.append(f"{'⏸' if paused else '▶'} {'PAUSED' if paused else 'Running'}")
+        status_items.append(f"Ghosts: {'✓' if SHOW_GHOSTS else '✗'}")
+        status_items.append(f"Trails: {'✓' if SHOW_TRAILS else '✗'}")
+        status_items.append(f"VelArrows: {'✓' if SHOW_VELOCITY_ARROWS else '✗'}")
+        status_items.append(f"Σ-Bands: {'✓' if SHOW_SIGMA_BANDS else '✗'}")
         status_items.append(f"FPS: {int(clock.get_fps())}")
         
         status_text = " | ".join(status_items)
         status_render = panel_font.render(status_text, True, (140, 160, 180))
-        screen.blit(status_render, (15, 50))
+        screen.blit(status_render, (15, 65))
         
-        # Collision warnings panel (right side)
+        # B-plane visualization panel (replaces old collision warning)
         if collision_detected and collision_pair[0] is not None:
-            warning_panel_width = 260
-            warning_panel_height = 80
-            warning_surf = pygame.Surface((warning_panel_width, warning_panel_height))
-            warning_surf.fill((45, 30, 30))
-            warning_surf.set_alpha(240)
-            screen.blit(warning_surf, (WIN_W - warning_panel_width - 15, 85))
-            
-            warning_title = title_font.render("⚠ Collision Warning", True, (255, 220, 220))
-            screen.blit(warning_title, (WIN_W - warning_panel_width - 10, 90))
-            
-            warning_font = pygame.font.SysFont("Arial", 12, bold=True)
-            msg = f"V{collision_pair[0]} ↔ V{collision_pair[1]}"
-            warning_render = warning_font.render(msg, True, (255, 100, 100))
-            screen.blit(warning_render, (WIN_W - warning_panel_width - 5, 115))
-            
-            detail = panel_font.render("B-plane collision detected!", True, (255, 180, 100))
-            screen.blit(detail, (WIN_W - warning_panel_width - 5, 135))
+            draw_bplane_panel(screen, vehicles, collision_pair, collision_prob, panel_font, sim_time)
         
         # Legend panel (bottom right)
         legend_width = 200
