@@ -87,6 +87,36 @@ class vehicle_simulation:
 
         return False, None, None
 
+    def check_physical_collision(self, collision_distance: float = 2.0):
+        """
+        Check if vehicles are actually physically touching (actual crash).
+        This is different from is_collision which predicts future collisions.
+        
+        Args:
+            collision_distance: Minimum distance (meters) to consider vehicles touching
+            
+        Returns:
+            (is_collision: bool, vehicle1_index: int, vehicle2_index: int)
+        """
+        for i in range(len(self.vehicles)):
+            for j in range(i + 1, len(self.vehicles)):
+                vehicleA = self.vehicles[i]
+                vehicleB = self.vehicles[j]
+
+                # Get current external states (actual positions)
+                A_x, A_y, _, _ = vehicleA.external_state
+                B_x, B_y, _, _ = vehicleB.external_state
+
+                # Calculate distance between vehicles
+                rel_pos = np.array([A_x - B_x, A_y - B_y])
+                distance = np.linalg.norm(rel_pos)
+
+                # Check if vehicles are touching (within collision_distance)
+                if distance < collision_distance:
+                    return True, i, j
+
+        return False, None, None
+
     def time_step(self, control_inputs):
         for i in range(len(self.vehicles)):
             self.vehicles[i].update_external(control_inputs[i], self.delta_t)

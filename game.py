@@ -8,6 +8,8 @@ import pygame
 import numpy as np
 from typing import List, Tuple
 from utils.vehicle_algo import vehicle as VehicleAlgo, vehicle_simulation
+from utils.crash_tracker import CrashTracker
+from utils.detailed_crash_tracker import DetailedCrashTracker
 
 # ---------- Display / Style ----------
 WIN_W, WIN_H = 1200, 800
@@ -919,7 +921,8 @@ def draw_edges(screen, nodes, edges, w2s, scale, pan, base_scale, zoom_scale, fo
                             label_count += 1
 
 # ---------- Collision Detection ----------
-def check_collisions(vehicles: List[Vehicle]):
+def check_collisions(vehicles: List[Vehicle], crash_tracker: CrashTracker = None, 
+                     detailed_tracker: DetailedCrashTracker = None, sim_time: float = 0.0):
     """Use vehicle_algo's celestial mechanics b-plane collision detection"""
     # Reset collision flags
     for v in vehicles:
@@ -936,6 +939,18 @@ def check_collisions(vehicles: List[Vehicle]):
     
     # Check collision at 95% confidence level
     is_collision, idx1, idx2 = sim.is_collision(0.99)
+    
+    # Record detection if crash tracker is provided
+    if crash_tracker is not None and is_collision and idx1 is not None and idx2 is not None:
+        crash_tracker.record_detection(sim_time, idx1, idx2, 0.99)
+    
+    # Record detailed detection if detailed tracker is provided
+    if detailed_tracker is not None and is_collision and idx1 is not None and idx2 is not None:
+        # Add id to vehicles for tracking
+        vehicles[idx1].algo_vehicle.id = idx1
+        vehicles[idx2].algo_vehicle.id = idx2
+        detailed_tracker.record_event(sim_time, vehicles[idx1].algo_vehicle, vehicles[idx2].algo_vehicle,
+                                     'detection', confidence=0.99, is_crash=False)
     
     # Calculate actual Pc for the pair (simplified - would need actual b-plane calculation)
     collision_prob = 0.0
@@ -954,6 +969,29 @@ def check_collisions(vehicles: List[Vehicle]):
         return True, idx1, idx2, collision_prob
     
     return False, None, None, 0.0
+
+def check_physical_crashes(vehicles: List[Vehicle], crash_tracker: CrashTracker = None,
+                          detailed_tracker: DetailedCrashTracker = None, sim_time: float = 0.0):
+    """Check if vehicles are actually physically touching (actual crash)"""
+    algo_vehicles = [v.algo_vehicle for v in vehicles]
+    sim = vehicle_simulation(algo_vehicles)
+    
+    # Check for physical collision
+    is_crash, idx1, idx2 = sim.check_physical_collision(collision_distance=2.0)
+    
+    # Record actual crash if crash tracker is provided
+    if crash_tracker is not None and is_crash and idx1 is not None and idx2 is not None:
+        crash_tracker.record_actual_crash(sim_time, idx1, idx2)
+    
+    # Record detailed crash if detailed tracker is provided
+    if detailed_tracker is not None and is_crash and idx1 is not None and idx2 is not None:
+        # Add id to vehicles for tracking
+        vehicles[idx1].algo_vehicle.id = idx1
+        vehicles[idx2].algo_vehicle.id = idx2
+        detailed_tracker.record_event(sim_time, vehicles[idx1].algo_vehicle, vehicles[idx2].algo_vehicle,
+                                     'crash', confidence=None, is_crash=True)
+    
+    return is_crash, idx1, idx2
 
 def draw_bplane_panel(screen, vehicles, collision_pair, collision_prob, font, time, is_active=True):
     """Draw b-plane visualization panel (always visible, greyed when inactive)"""
@@ -1397,6 +1435,12 @@ def main():
     G = RoadGraph(nodes, edges)
     vehicles = [Vehicle(G, i) for i in range(NUM_AGENTS)]
     
+    # Initialize crash trackers (both for compatibility and detailed tracking)
+    crash_tracker = CrashTracker(results_dir="results")
+    crash_tracker.start_trial()
+    detailed_tracker = DetailedCrashTracker(results_dir="results")
+    detailed_tracker.start_trial()
+    
     # Collision check timer
     collision_timer = 0.0
     collision_detected = False
@@ -1406,6 +1450,18 @@ def main():
     # Animation timing
     sim_time = 0.0
     paused = False
+    
+    # Trial settings
+    max_trial_time = 60.0  # Maximum time per trial (seconds)
+    num_trials = 1  # Default: single trial (can be changed for batch mode)
+    
+    # Check for command line arguments for batch mode
+    if len(sys.argv) > 1:
+        try:
+            num_trials = int(sys.argv[1])
+            print(f"[Game] Running {num_trials} trials")
+        except ValueError:
+            print(f"[Game] Invalid number of trials, using default: 1")
     
     # Keyboard control state
     keys_pressed = set()
@@ -1418,6 +1474,11 @@ def main():
 
         for ev in pygame.event.get():
             if ev.type == pygame.QUIT:
+                # Save final summary before exiting
+                crash_tracker.end_trial()
+                detailed_tracker.end_trial(trial_duration=sim_time)
+                crash_tracker.save_final_summary()
+                detailed_tracker.save_final_summary()
                 running = False
             elif ev.type == pygame.MOUSEBUTTONDOWN:
                 if ev.button == 3:
@@ -1493,17 +1554,37 @@ def main():
             for v in vehicles:
                 v.update(SIM_DT)
 
-            # Check for collisions periodically
+            # Check for physical crashes (actual collisions)
+            physical_crash, crash_idx1, crash_idx2 = check_physical_crashes(vehicles, crash_tracker, detailed_tracker, sim_time)
+            
+            # Check for collisions periodically (algorithm predictions)
             collision_timer += dt
             if collision_timer >= PREDICTION_UPDATE_INTERVAL:
                 collision_timer = 0.0
-                collision_detected, idx1, idx2, cprob = check_collisions(vehicles)
+                collision_detected, idx1, idx2, cprob = check_collisions(vehicles, crash_tracker, detailed_tracker, sim_time)
                 if collision_detected:
                     collision_pair = (idx1, idx2)
                     collision_prob = cprob
                 else:
                     collision_pair = (None, None)
                     collision_prob = 0.0
+            
+            # Check if trial should end (time limit reached)
+            if sim_time >= max_trial_time:
+                crash_tracker.end_trial()
+                detailed_tracker.end_trial(trial_duration=sim_time)
+                # Reset for next trial or exit
+                if crash_tracker.total_trials < num_trials:
+                    print(f"[Game] Trial {crash_tracker.total_trials} completed, starting trial {crash_tracker.total_trials + 1}")
+                    crash_tracker.start_trial()
+                    detailed_tracker.start_trial()
+                    vehicles = [Vehicle(G, i) for i in range(NUM_AGENTS)]
+                    sim_time = 0.0
+                else:
+                    crash_tracker.save_final_summary()
+                    detailed_tracker.save_final_summary()
+                    print(f"\n[Game] Completed {num_trials} trials")
+                    running = False
         
         # Calculate time pulse for breathing animation (0 to 1)
         time_pulse = (sim_time % 3.0) / 3.0
