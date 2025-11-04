@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-11-04T17:20:12.349910",
+  "total_trials": 1,
+  "total_crashes": 530,
+  "total_detections": 194,
+  "true_positives": 126,
+  "false_positives": 68,
+  "missed_crashes": 404,
+  "precision": 0.6494845360824743,
+  "recall": 0.23773584905660378,
+  "f1_score": 0.34806629834254144,
+  "average_detection_delay": 0.10078571428571444
+}

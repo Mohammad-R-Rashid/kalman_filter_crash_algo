@@ -1,0 +1,2 @@
+trial_num,trial_duration,total_crashes,total_detections,true_positives,false_positives,missed_crashes,avg_detection_delay,precision,recall,f1_score,avg_uncertainty,avg_b_plane_miss_distance,avg_mahalanobis_distance
+1,60.016000000000346,530,194,126,68,404,0.10078571428571444,0.6494845360824743,0.23773584905660378,0.34806629834254144,0.09892287923196742,0.05415522310592919,1.3453829608972236

@@ -1,0 +1,17 @@
+{
+  "trials_completed": 1,
+  "total_actual_crashes": 530,
+  "total_detections": 194,
+  "detection_matches": 126,
+  "missed_crashes": 404,
+  "false_positives": 68,
+  "average_detection_delay": 0.10078571428571444,
+  "latest_trial_stats": {
+    "trial_num": 1,
+    "crashes": 530,
+    "detections": 194,
+    "matches": 126,
+    "missed": 404,
+    "false_positives": 68
+  }
+}

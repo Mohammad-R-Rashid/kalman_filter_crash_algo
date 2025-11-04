@@ -1,0 +1,8459 @@
+{
+  "trial_num": 1,
+  "crashes": [
+    {
+      "timestamp": 18.588000000000008,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "trial": 1
+    },
+    {
+      "timestamp": 18.64700000000001,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.168999999999993,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.221999999999994,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.412999999999993,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.46399999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.65499999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.70499999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.77099999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.82199999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.872999999999987,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.922999999999988,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.989999999999988,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.040999999999986,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.091999999999985,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.142999999999983,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.209999999999983,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.26099999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.31199999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.36399999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.42999999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.480999999999977,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.531999999999975,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.582999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.649999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.699999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.751999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.802999999999972,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.869999999999973,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.92099999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.97199999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.02299999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.08899999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.14099999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.19099999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.24299999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.30899999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.35999999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.41199999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.46399999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.52999999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.580999999999975,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.63199999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.68299999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.74899999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.79999999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.850999999999985,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.902999999999984,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.969999999999985,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.02099999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.072999999999986,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.12399999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.18999999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.24099999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.291999999999994,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.342999999999996,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.409,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.46,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.511,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.563,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.632000000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.684000000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.736000000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.790000000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.857000000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.90800000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.95900000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.01000000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.076000000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.128000000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.179000000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.23000000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.29700000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.34900000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.40000000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.45100000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.517000000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.568000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.620000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.67100000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.73800000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.78900000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.84100000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.89200000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.95900000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.01000000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.061000000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.113000000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.17900000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.23000000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.28100000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.33200000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.398000000000046,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.44900000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.499000000000045,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.551000000000045,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.61400000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.66500000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.71600000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.76700000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.833000000000055,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.88400000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.934000000000054,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.986000000000054,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.052000000000056,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.10300000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.15400000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.20600000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.27300000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.32400000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.375000000000064,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.426000000000066,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.493000000000066,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.54400000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.59500000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.64700000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.71300000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.764000000000074,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.816000000000074,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.867000000000075,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.934000000000076,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.98500000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.03600000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.08800000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.15400000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.20600000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.25700000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.308000000000085,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.375000000000085,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.42600000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.47700000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.52800000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.59500000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.64600000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.697000000000095,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.7480000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.8170000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.8680000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.9190000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.9720000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.0670000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.1180000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.1710000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.2230000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.2900000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.3420000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.3930000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.4440000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.510000000000105,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.565000000000104,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.6180000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.6690000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.736000000000104,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.787000000000106,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.839000000000105,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.89000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.95700000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.00900000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.06000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.11100000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.17900000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.23000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.28100000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.33300000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.40000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.451000000000114,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.503000000000114,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.554000000000116,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.74800000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.798000000000116,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.865000000000116,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.91600000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.96700000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.01800000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.084000000000124,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.135000000000126,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.18600000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.23700000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.30400000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.35500000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.406000000000134,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.457000000000136,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.52300000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.57400000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.62500000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.676000000000144,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.74200000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.79300000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.84400000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.89600000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.96300000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.01400000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.065000000000154,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.116000000000156,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.183000000000156,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.235000000000156,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.28600000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.33800000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.40500000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.45600000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.50800000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.55900000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.62600000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.67700000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.72900000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.780000000000165,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.847000000000165,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.89800000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.94900000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.00000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.06700000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.11900000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.17000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.221000000000174,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.28700000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.339000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.391000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.44200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.510000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.56100000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.611000000000175,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.66200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.730000000000175,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.781000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.83200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.88300000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.95000000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.00100000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.05300000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.104000000000184,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.171000000000184,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.223000000000184,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.274000000000186,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.32500000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.39200000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.44300000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.49400000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.54600000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.61900000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.67100000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.72300000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.77400000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.84100000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.892000000000195,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.9430000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.995000000000196,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.0620000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.1130000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.1640000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.2150000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.2820000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.3340000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.385000000000204,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.437000000000204,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.506000000000206,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.55700000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.60800000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.66000000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.71800000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.77000000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.82100000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.87200000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.938000000000216,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.98900000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.04000000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.09100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.15800000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.20800000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.26000000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.31100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.37900000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.43000000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.48100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.532000000000224,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.599000000000224,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.650000000000226,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.702000000000226,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.75300000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.82000000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.87100000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.92200000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.97400000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.04100000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.09300000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.14400000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.195000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.26300000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.314000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.36700000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.451000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.518000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.56900000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.62000000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.67200000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.73900000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.79000000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.84100000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.89300000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.96000000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.011000000000244,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.062000000000246,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.11300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.18000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.23200000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.28300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.33400000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.40200000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.45300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.504000000000254,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.555000000000256,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.61800000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.66900000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.71900000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.77000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.83700000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.88800000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.93900000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.99100000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.05800000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.109000000000265,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.16200000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.213000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.28100000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.332000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.383000000000266,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.43600000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.50300000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.554000000000265,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.60700000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.658000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.725000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.776000000000266,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.828000000000266,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.87900000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.94500000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.99700000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.04700000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.09800000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.16600000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.21700000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.26800000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.31900000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.385000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.437000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.489000000000274,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.540000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.607000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.659000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.711000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.763000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.830000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.882000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.93300000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.98400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.05100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.10200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.15400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.20500000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.27200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.33300000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.38900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.50800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.57600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.62800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.68000000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.73100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.79900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.851000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.90200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.95400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.02100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.07300000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.12500000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.17600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.24400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.29600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.34700000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.39900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.46600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.51800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.57000000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.62200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.68900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.74000000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.79100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.84200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.90900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.960000000000285,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.01100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.06200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.12500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.17600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.22800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.27800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.34500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.39600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.44800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.50100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.56800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.62000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.67200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.72300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.79100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.84200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.89400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.94800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.01600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.06700000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.11900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.17100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.23800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.29000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.34200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.39300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.46100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.51200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.56500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.61900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.68700000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.73900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.79100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.84200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.91000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.96200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.01400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.06500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.13300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.18400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.23600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.28800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.356000000000286,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.40700000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.45900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.51000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.70400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.75400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.82100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.87300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.92500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.97600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.04300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.09400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.145000000000294,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.197000000000294,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.2630000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.315000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.367000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.419000000000295,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.486000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.538000000000295,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.5890000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.6410000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.7080000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.760000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.8110000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.8680000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.9350000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.9870000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.0380000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.089000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.156000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.207000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.2600000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.3120000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.3790000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.430000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.482000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.53600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.604000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.656000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.708000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.759000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.827000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.878000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.930000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.98100000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.049000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.10000000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.15200000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.20300000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.271000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.323000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.37400000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.42600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.49300000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.54500000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.59700000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.64800000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.71500000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.76600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.81700000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.868000000000315,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.935000000000315,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.98600000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.03700000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.08900000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.15500000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.20600000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.257000000000325,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.30800000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.37500000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.42600000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.47800000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.52900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.62100000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.68700000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.73900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.80600000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.85700000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.90900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.960000000000335,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.02800000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.079000000000335,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.13000000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.18100000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.24800000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.29900000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.35100000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.40200000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.46900000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.520000000000344,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.571000000000346,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.62400000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.691000000000344,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.74300000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.794000000000345,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.84500000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.913000000000345,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.96400000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 60.016000000000346,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    }
+  ],
+  "detections": [
+    {
+      "timestamp": 0.227,
+      "vehicle1_id": 11,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 0.444,
+      "vehicle1_id": 15,
+      "vehicle2_id": 24,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 0.8970000000000002,
+      "vehicle1_id": 5,
+      "vehicle2_id": 50,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 2.0540000000000003,
+      "vehicle1_id": 6,
+      "vehicle2_id": 51,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 3.268,
+      "vehicle1_id": 31,
+      "vehicle2_id": 44,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 3.4889999999999994,
+      "vehicle1_id": 5,
+      "vehicle2_id": 50,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 4.474999999999999,
+      "vehicle1_id": 11,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 4.689999999999999,
+      "vehicle1_id": 24,
+      "vehicle2_id": 27,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 5.392999999999999,
+      "vehicle1_id": 9,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 5.602999999999999,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 6.098999999999998,
+      "vehicle1_id": 14,
+      "vehicle2_id": 47,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 6.326999999999998,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 6.820999999999998,
+      "vehicle1_id": 5,
+      "vehicle2_id": 50,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 7.068999999999998,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 7.313999999999998,
+      "vehicle1_id": 40,
+      "vehicle2_id": 57,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 8.049999999999997,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 9.038999999999998,
+      "vehicle1_id": 9,
+      "vehicle2_id": 55,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 9.983999999999998,
+      "vehicle1_id": 26,
+      "vehicle2_id": 39,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 10.190999999999999,
+      "vehicle1_id": 26,
+      "vehicle2_id": 49,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 10.398,
+      "vehicle1_id": 26,
+      "vehicle2_id": 49,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 10.605,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 11.339000000000004,
+      "vehicle1_id": 24,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 11.542000000000003,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 11.789000000000005,
+      "vehicle1_id": 29,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 12.495000000000005,
+      "vehicle1_id": 9,
+      "vehicle2_id": 55,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 12.948000000000006,
+      "vehicle1_id": 4,
+      "vehicle2_id": 57,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 13.190000000000007,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 13.99900000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 14.24400000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 15.23200000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 16.21900000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 17.198000000000008,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 17.684000000000008,
+      "vehicle1_id": 32,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 17.906000000000006,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 18.64700000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 18.891000000000005,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.108000000000008,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.323000000000008,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.53900000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 20,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.78000000000001,
+      "vehicle1_id": 11,
+      "vehicle2_id": 28,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.991000000000007,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.206000000000007,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.421000000000006,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.63500000000001,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.85000000000001,
+      "vehicle1_id": 4,
+      "vehicle2_id": 21,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 21.086000000000013,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 21.79700000000001,
+      "vehicle1_id": 11,
+      "vehicle2_id": 49,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 22.51500000000001,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 23.496000000000006,
+      "vehicle1_id": 14,
+      "vehicle2_id": 36,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 23.730000000000004,
+      "vehicle1_id": 4,
+      "vehicle2_id": 57,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 23.970000000000002,
+      "vehicle1_id": 51,
+      "vehicle2_id": 56,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 24.217000000000002,
+      "vehicle1_id": 17,
+      "vehicle2_id": 24,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 24.450000000000003,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 24.668000000000003,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 25.41,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 25.658,
+      "vehicle1_id": 7,
+      "vehicle2_id": 16,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 25.907999999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 26.385999999999996,
+      "vehicle1_id": 30,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 26.602999999999994,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 27.068999999999996,
+      "vehicle1_id": 15,
+      "vehicle2_id": 48,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 28.290999999999997,
+      "vehicle1_id": 16,
+      "vehicle2_id": 32,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 28.523999999999994,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 29.267999999999994,
+      "vehicle1_id": 33,
+      "vehicle2_id": 47,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 29.491999999999994,
+      "vehicle1_id": 16,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.70499999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.922999999999988,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.142999999999983,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.36399999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.582999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.802999999999972,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.02299999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.24299999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.46399999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.68299999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.902999999999984,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.12399999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.342999999999996,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.563,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.790000000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.01000000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.23000000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.45100000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.67100000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.89200000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.113000000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.33200000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.551000000000045,
+      "vehicle1_id": 1,
+      "vehicle2_id": 52,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.76700000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.986000000000054,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.20600000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.426000000000066,
+      "vehicle1_id": 2,
+      "vehicle2_id": 31,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.64700000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.867000000000075,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.08800000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.308000000000085,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.52800000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.7480000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.9720000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.2230000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.4440000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.6690000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.89000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.11100000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.33300000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.798000000000116,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.01800000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.23700000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.457000000000136,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.676000000000144,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.89600000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.116000000000156,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.33800000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.55900000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.780000000000165,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.00000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.221000000000174,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.44200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.66200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.88300000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.104000000000184,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.32500000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.54600000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.77400000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.995000000000196,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.2150000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.437000000000204,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.66000000000021,
+      "vehicle1_id": 0,
+      "vehicle2_id": 39,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.87200000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.09100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.31100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.532000000000224,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.75300000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.97400000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.195000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.451000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.67200000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.89300000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.11300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.33400000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.555000000000256,
+      "vehicle1_id": 1,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.77000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.99100000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.213000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.43600000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.658000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.87900000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.09800000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.31900000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.540000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.763000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.98400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.20500000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.50800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.73100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.95400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.17600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.39900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.62200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.84200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.06200000000029,
+      "vehicle1_id": 1,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.27800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.50100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.72300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.94800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.17100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.39300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.61900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.84200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.06500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.28800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.75400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.97600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.197000000000294,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.419000000000295,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.6410000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.8680000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.089000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.3120000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.53600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.759000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.98100000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.20300000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.42600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.64800000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.868000000000315,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.08900000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.30800000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.52900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.73900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.960000000000335,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.18100000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.40200000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.62400000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.84500000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "confidence": 0.99,
+      "trial": 1
+    }
+  ],
+  "matches": [
+    {
+      "detection_time": 25.907999999999998,
+      "crash_time": 30.168999999999993,
+      "delay": 4.260999999999996,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 30.70499999999999,
+      "crash_time": 30.77099999999999,
+      "delay": 0.06599999999999895,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 30.922999999999988,
+      "crash_time": 30.989999999999988,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 31.142999999999983,
+      "crash_time": 31.209999999999983,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 31.36399999999998,
+      "crash_time": 31.42999999999998,
+      "delay": 0.06599999999999895,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 31.582999999999974,
+      "crash_time": 31.649999999999974,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 31.802999999999972,
+      "crash_time": 31.869999999999973,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 32.02299999999997,
+      "crash_time": 32.08899999999997,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 32.24299999999997,
+      "crash_time": 32.30899999999997,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 32.46399999999997,
+      "crash_time": 32.52999999999997,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 32.68299999999998,
+      "crash_time": 32.74899999999998,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 32.902999999999984,
+      "crash_time": 32.969999999999985,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 33.12399999999999,
+      "crash_time": 33.18999999999999,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 33.342999999999996,
+      "crash_time": 33.409,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 33.563,
+      "crash_time": 33.632000000000005,
+      "delay": 0.06900000000000261,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 33.790000000000006,
+      "crash_time": 33.857000000000006,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 34.01000000000001,
+      "crash_time": 34.076000000000015,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 34.23000000000002,
+      "crash_time": 34.29700000000002,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 34.45100000000002,
+      "crash_time": 34.517000000000024,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 34.67100000000003,
+      "crash_time": 34.73800000000003,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 34.89200000000003,
+      "crash_time": 34.95900000000003,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 35.113000000000035,
+      "crash_time": 35.17900000000004,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 35.33200000000004,
+      "crash_time": 35.398000000000046,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 35.76700000000005,
+      "crash_time": 35.833000000000055,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 35.986000000000054,
+      "crash_time": 36.052000000000056,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 36.20600000000006,
+      "crash_time": 36.27300000000006,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 36.64700000000007,
+      "crash_time": 36.71300000000007,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 36.867000000000075,
+      "crash_time": 36.934000000000076,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 37.08800000000008,
+      "crash_time": 37.15400000000008,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 37.308000000000085,
+      "crash_time": 37.375000000000085,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 37.52800000000009,
+      "crash_time": 37.59500000000009,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 37.7480000000001,
+      "crash_time": 37.8170000000001,
+      "delay": 0.06900000000000261,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 37.9720000000001,
+      "crash_time": 38.0670000000001,
+      "delay": 0.09499999999999886,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 38.2230000000001,
+      "crash_time": 38.2900000000001,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 38.4440000000001,
+      "crash_time": 38.510000000000105,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 38.6690000000001,
+      "crash_time": 38.736000000000104,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 38.89000000000011,
+      "crash_time": 38.95700000000011,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 39.11100000000011,
+      "crash_time": 39.17900000000011,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 39.33300000000011,
+      "crash_time": 39.40000000000011,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 39.798000000000116,
+      "crash_time": 39.865000000000116,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 40.01800000000012,
+      "crash_time": 40.084000000000124,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 40.23700000000013,
+      "crash_time": 40.30400000000013,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 40.457000000000136,
+      "crash_time": 40.52300000000014,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 40.676000000000144,
+      "crash_time": 40.74200000000015,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 40.89600000000015,
+      "crash_time": 40.96300000000015,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 41.116000000000156,
+      "crash_time": 41.183000000000156,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 41.33800000000016,
+      "crash_time": 41.40500000000016,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 41.55900000000016,
+      "crash_time": 41.62600000000016,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 41.780000000000165,
+      "crash_time": 41.847000000000165,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 42.00000000000017,
+      "crash_time": 42.06700000000017,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 42.221000000000174,
+      "crash_time": 42.28700000000018,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 42.44200000000018,
+      "crash_time": 42.510000000000176,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 42.66200000000018,
+      "crash_time": 42.730000000000175,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 42.88300000000018,
+      "crash_time": 42.95000000000018,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 43.104000000000184,
+      "crash_time": 43.171000000000184,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 43.32500000000019,
+      "crash_time": 43.39200000000019,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 43.54600000000019,
+      "crash_time": 43.61900000000019,
+      "delay": 0.0730000000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 43.77400000000019,
+      "crash_time": 43.84100000000019,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 43.995000000000196,
+      "crash_time": 44.0620000000002,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 44.2150000000002,
+      "crash_time": 44.2820000000002,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 44.437000000000204,
+      "crash_time": 44.506000000000206,
+      "delay": 0.06900000000000261,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 44.87200000000021,
+      "crash_time": 44.938000000000216,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 45.09100000000022,
+      "crash_time": 45.15800000000022,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 45.31100000000022,
+      "crash_time": 45.37900000000022,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 45.532000000000224,
+      "crash_time": 45.599000000000224,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 45.75300000000023,
+      "crash_time": 45.82000000000023,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 45.97400000000023,
+      "crash_time": 46.04100000000023,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 46.195000000000235,
+      "crash_time": 46.26300000000023,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 46.451000000000235,
+      "crash_time": 46.518000000000235,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 46.67200000000024,
+      "crash_time": 46.73900000000024,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 46.89300000000024,
+      "crash_time": 46.96000000000024,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 47.11300000000025,
+      "crash_time": 47.18000000000025,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 47.33400000000025,
+      "crash_time": 47.40200000000025,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 47.77000000000026,
+      "crash_time": 47.83700000000026,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 47.99100000000026,
+      "crash_time": 48.05800000000026,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 48.213000000000264,
+      "crash_time": 48.28100000000026,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 48.43600000000026,
+      "crash_time": 48.50300000000026,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 48.658000000000264,
+      "crash_time": 48.725000000000264,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 48.87900000000027,
+      "crash_time": 48.94500000000027,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 49.09800000000027,
+      "crash_time": 49.16600000000027,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 49.31900000000027,
+      "crash_time": 49.385000000000275,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 49.540000000000276,
+      "crash_time": 49.607000000000276,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 49.763000000000275,
+      "crash_time": 49.830000000000275,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 49.98400000000028,
+      "crash_time": 50.05100000000028,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 50.20500000000028,
+      "crash_time": 50.27200000000028,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 50.50800000000028,
+      "crash_time": 50.57600000000028,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 50.73100000000028,
+      "crash_time": 50.79900000000028,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 50.95400000000028,
+      "crash_time": 51.02100000000028,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 51.17600000000028,
+      "crash_time": 51.24400000000028,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 51.39900000000028,
+      "crash_time": 51.46600000000028,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 51.62200000000028,
+      "crash_time": 51.68900000000028,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 51.84200000000028,
+      "crash_time": 51.90900000000028,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 52.27800000000029,
+      "crash_time": 52.34500000000029,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 52.50100000000029,
+      "crash_time": 52.56800000000029,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 52.72300000000029,
+      "crash_time": 52.79100000000029,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 52.94800000000029,
+      "crash_time": 53.01600000000029,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 53.17100000000029,
+      "crash_time": 53.23800000000029,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 53.39300000000029,
+      "crash_time": 53.46100000000029,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 53.61900000000029,
+      "crash_time": 53.68700000000029,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 53.84200000000029,
+      "crash_time": 53.91000000000029,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 54.06500000000029,
+      "crash_time": 54.13300000000029,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 54.28800000000029,
+      "crash_time": 54.356000000000286,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 54.75400000000029,
+      "crash_time": 54.82100000000029,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 54.97600000000029,
+      "crash_time": 55.04300000000029,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 55.197000000000294,
+      "crash_time": 55.2630000000003,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 55.419000000000295,
+      "crash_time": 55.486000000000296,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 55.6410000000003,
+      "crash_time": 55.7080000000003,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 55.8680000000003,
+      "crash_time": 55.9350000000003,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 56.089000000000304,
+      "crash_time": 56.156000000000304,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 56.3120000000003,
+      "crash_time": 56.3790000000003,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 56.53600000000031,
+      "crash_time": 56.604000000000305,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 56.759000000000306,
+      "crash_time": 56.827000000000304,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 56.98100000000031,
+      "crash_time": 57.049000000000305,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 57.20300000000031,
+      "crash_time": 57.271000000000306,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 57.42600000000031,
+      "crash_time": 57.49300000000031,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 57.64800000000031,
+      "crash_time": 57.71500000000031,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 57.868000000000315,
+      "crash_time": 57.935000000000315,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 58.08900000000032,
+      "crash_time": 58.15500000000032,
+      "delay": 0.0660000000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 58.30800000000033,
+      "crash_time": 58.37500000000033,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 58.52900000000033,
+      "crash_time": 58.62100000000033,
+      "delay": 0.09199999999999875,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 58.73900000000033,
+      "crash_time": 58.80600000000033,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 58.960000000000335,
+      "crash_time": 59.02800000000033,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 59.18100000000034,
+      "crash_time": 59.24800000000034,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 59.40200000000034,
+      "crash_time": 59.46900000000034,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 59.62400000000034,
+      "crash_time": 59.691000000000344,
+      "delay": 0.06700000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "detection_time": 59.84500000000035,
+      "crash_time": 59.913000000000345,
+      "delay": 0.06799999999999784,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    }
+  ],
+  "missed_crashes": [
+    {
+      "timestamp": 18.588000000000008,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "trial": 1
+    },
+    {
+      "timestamp": 18.64700000000001,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.221999999999994,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.412999999999993,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.46399999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.65499999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.70499999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.82199999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.872999999999987,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 30.922999999999988,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.040999999999986,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.091999999999985,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.142999999999983,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.26099999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.31199999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.36399999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.480999999999977,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.531999999999975,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.582999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.699999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.751999999999974,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.802999999999972,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.92099999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 31.97199999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.02299999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.14099999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.19099999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.24299999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.35999999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.41199999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.46399999999997,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.580999999999975,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.63199999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.68299999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.79999999999998,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.850999999999985,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 32.902999999999984,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.02099999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.072999999999986,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.12399999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.24099999999999,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.291999999999994,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.342999999999996,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.46,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.511,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.563,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.684000000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.736000000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.790000000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.90800000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 33.95900000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.01000000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.128000000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.179000000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.23000000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.34900000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.40000000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.45100000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.568000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.620000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.67100000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.78900000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.84100000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 34.89200000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.01000000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.061000000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.113000000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.23000000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.28100000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.33200000000004,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.44900000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.499000000000045,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.551000000000045,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.61400000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.66500000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.71600000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.76700000000005,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.88400000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.934000000000054,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.986000000000054,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.10300000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.15400000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.20600000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.32400000000006,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.375000000000064,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.426000000000066,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.493000000000066,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.54400000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.59500000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.64700000000007,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.764000000000074,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.816000000000074,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.867000000000075,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.98500000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.03600000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.08800000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.20600000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.25700000000008,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.308000000000085,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.42600000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.47700000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.52800000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.64600000000009,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.697000000000095,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.7480000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.8680000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.9190000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 37.9720000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.1180000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.1710000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.2230000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.3420000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.3930000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.4440000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.565000000000104,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.6180000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.6690000000001,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.787000000000106,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.839000000000105,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 38.89000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.00900000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.06000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.11100000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.23000000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.28100000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.33300000000011,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.451000000000114,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.503000000000114,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.554000000000116,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.74800000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.798000000000116,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.91600000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 39.96700000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.01800000000012,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.135000000000126,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.18600000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.23700000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.35500000000013,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.406000000000134,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.457000000000136,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.57400000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.62500000000014,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.676000000000144,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.79300000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.84400000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 40.89600000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.01400000000015,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.065000000000154,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.116000000000156,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.235000000000156,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.28600000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.33800000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.45600000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.50800000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.55900000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.67700000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.72900000000016,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.780000000000165,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.89800000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 41.94900000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.00000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.11900000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.17000000000017,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.221000000000174,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.339000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.391000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.44200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.56100000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.611000000000175,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.66200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.781000000000176,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.83200000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 42.88300000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.00100000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.05300000000018,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.104000000000184,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.223000000000184,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.274000000000186,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.32500000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.44300000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.49400000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.54600000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.67100000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.72300000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.77400000000019,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.892000000000195,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.9430000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 43.995000000000196,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.1130000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.1640000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.2150000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.3340000000002,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.385000000000204,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.437000000000204,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.55700000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.60800000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.66000000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.71800000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.77000000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.82100000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.87200000000021,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.98900000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.04000000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.09100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.20800000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.26000000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.31100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.43000000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.48100000000022,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.532000000000224,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.650000000000226,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.702000000000226,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.75300000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.87100000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.92200000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 45.97400000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.09300000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.14400000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.195000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.314000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.36700000000023,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.451000000000235,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.56900000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.62000000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.67200000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.79000000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.84100000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 46.89300000000024,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.011000000000244,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.062000000000246,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.11300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.23200000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.28300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.33400000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.45300000000025,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.504000000000254,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.555000000000256,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.61800000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.66900000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.71900000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.77000000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.88800000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.93900000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.99100000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.109000000000265,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.16200000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.213000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.332000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.383000000000266,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.43600000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.554000000000265,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.60700000000026,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.658000000000264,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.776000000000266,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.828000000000266,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.87900000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 48.99700000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.04700000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.09800000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.21700000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.26800000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.31900000000027,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.437000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.489000000000274,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.540000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.659000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.711000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.763000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.882000000000275,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.93300000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 49.98400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.10200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.15400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.20500000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.33300000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.38900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.50800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.62800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.68000000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.73100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.851000000000276,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.90200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 50.95400000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.07300000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.12500000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.17600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.29600000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.34700000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.39900000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.51800000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.57000000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.62200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.74000000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.79100000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.84200000000028,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 51.960000000000285,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.01100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.06200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.12500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.17600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.22800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.27800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.39600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.44800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.50100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.62000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.67200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.72300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.84200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.89400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.94800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.06700000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.11900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.17100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.29000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.34200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.39300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.51200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.56500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.61900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.73900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.79100000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.84200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 53.96200000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.01400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.06500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.18400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.23600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.28800000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.40700000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.45900000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.51000000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.70400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.75400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.87300000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.92500000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 54.97600000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.09400000000029,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.145000000000294,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.197000000000294,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.315000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.367000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.419000000000295,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.538000000000295,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.5890000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.6410000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.760000000000296,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.8110000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.8680000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 55.9870000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.0380000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.089000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.207000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.2600000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.3120000000003,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.430000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.482000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.53600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.656000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.708000000000304,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.759000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.878000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.930000000000305,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 56.98100000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.10000000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.15200000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.20300000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.323000000000306,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.37400000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.42600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.54500000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.59700000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.64800000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.76600000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.81700000000031,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.868000000000315,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 57.98600000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.03700000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.08900000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.20600000000032,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.257000000000325,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.30800000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.42600000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.47800000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.52900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.68700000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.73900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.85700000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.90900000000033,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 58.960000000000335,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.079000000000335,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.13000000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.18100000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.29900000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.35100000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.40200000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.520000000000344,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.571000000000346,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.62400000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.74300000000034,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.794000000000345,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.84500000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 59.96400000000035,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    },
+    {
+      "timestamp": 60.016000000000346,
+      "vehicle1_id": 2,
+      "vehicle2_id": 37,
+      "trial": 1
+    }
+  ],
+  "false_positives": [
+    {
+      "timestamp": 0.227,
+      "vehicle1_id": 11,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 0.444,
+      "vehicle1_id": 15,
+      "vehicle2_id": 24,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 0.8970000000000002,
+      "vehicle1_id": 5,
+      "vehicle2_id": 50,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 2.0540000000000003,
+      "vehicle1_id": 6,
+      "vehicle2_id": 51,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 3.268,
+      "vehicle1_id": 31,
+      "vehicle2_id": 44,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 3.4889999999999994,
+      "vehicle1_id": 5,
+      "vehicle2_id": 50,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 4.474999999999999,
+      "vehicle1_id": 11,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 4.689999999999999,
+      "vehicle1_id": 24,
+      "vehicle2_id": 27,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 5.392999999999999,
+      "vehicle1_id": 9,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 5.602999999999999,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 6.098999999999998,
+      "vehicle1_id": 14,
+      "vehicle2_id": 47,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 6.326999999999998,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 6.820999999999998,
+      "vehicle1_id": 5,
+      "vehicle2_id": 50,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 7.068999999999998,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 7.313999999999998,
+      "vehicle1_id": 40,
+      "vehicle2_id": 57,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 8.049999999999997,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 9.038999999999998,
+      "vehicle1_id": 9,
+      "vehicle2_id": 55,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 9.983999999999998,
+      "vehicle1_id": 26,
+      "vehicle2_id": 39,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 10.190999999999999,
+      "vehicle1_id": 26,
+      "vehicle2_id": 49,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 10.398,
+      "vehicle1_id": 26,
+      "vehicle2_id": 49,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 10.605,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 11.339000000000004,
+      "vehicle1_id": 24,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 11.542000000000003,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 11.789000000000005,
+      "vehicle1_id": 29,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 12.495000000000005,
+      "vehicle1_id": 9,
+      "vehicle2_id": 55,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 12.948000000000006,
+      "vehicle1_id": 4,
+      "vehicle2_id": 57,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 13.190000000000007,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 13.99900000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 14.24400000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 15.23200000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 16.21900000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 17.198000000000008,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 17.684000000000008,
+      "vehicle1_id": 32,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 17.906000000000006,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 18.64700000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 41,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 18.891000000000005,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.108000000000008,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.323000000000008,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.53900000000001,
+      "vehicle1_id": 5,
+      "vehicle2_id": 20,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.78000000000001,
+      "vehicle1_id": 11,
+      "vehicle2_id": 28,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 19.991000000000007,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.206000000000007,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.421000000000006,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.63500000000001,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 20.85000000000001,
+      "vehicle1_id": 4,
+      "vehicle2_id": 21,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 21.086000000000013,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 21.79700000000001,
+      "vehicle1_id": 11,
+      "vehicle2_id": 49,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 22.51500000000001,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 23.496000000000006,
+      "vehicle1_id": 14,
+      "vehicle2_id": 36,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 23.730000000000004,
+      "vehicle1_id": 4,
+      "vehicle2_id": 57,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 23.970000000000002,
+      "vehicle1_id": 51,
+      "vehicle2_id": 56,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 24.217000000000002,
+      "vehicle1_id": 17,
+      "vehicle2_id": 24,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 24.450000000000003,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 24.668000000000003,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 25.41,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 25.658,
+      "vehicle1_id": 7,
+      "vehicle2_id": 16,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 26.385999999999996,
+      "vehicle1_id": 30,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 26.602999999999994,
+      "vehicle1_id": 30,
+      "vehicle2_id": 34,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 27.068999999999996,
+      "vehicle1_id": 15,
+      "vehicle2_id": 48,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 28.290999999999997,
+      "vehicle1_id": 16,
+      "vehicle2_id": 32,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 28.523999999999994,
+      "vehicle1_id": 6,
+      "vehicle2_id": 40,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 29.267999999999994,
+      "vehicle1_id": 33,
+      "vehicle2_id": 47,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 29.491999999999994,
+      "vehicle1_id": 16,
+      "vehicle2_id": 58,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 35.551000000000045,
+      "vehicle1_id": 1,
+      "vehicle2_id": 52,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 36.426000000000066,
+      "vehicle1_id": 2,
+      "vehicle2_id": 31,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 44.66000000000021,
+      "vehicle1_id": 0,
+      "vehicle2_id": 39,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 47.555000000000256,
+      "vehicle1_id": 1,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    },
+    {
+      "timestamp": 52.06200000000029,
+      "vehicle1_id": 1,
+      "vehicle2_id": 43,
+      "confidence": 0.99,
+      "trial": 1
+    }
+  ]
+}
